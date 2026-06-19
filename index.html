@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudo de Planos de Saúde – Grupo Salus | FBN RE</title>
+  <meta name="description" content="Comparativo de planos de saúde empresariais para o Grupo Salus. Compare coberturas, faixas etárias e preços de Amil, HapVida, Porto Seguro, SulAmérica, Bradesco e Unimed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark:      #0b0f1a;
+      --bg-card:      #141927;
+      --bg-card2:     #1b2133;
+      --border:       rgba(255,255,255,0.08);
+      --accent:       #4f8ef7;
+      --accent2:      #7c5af7;
+      --accent3:      #2ecb96;
+      --text-main:    #e8ecf3;
+      --text-muted:   #7a8499;
+      --text-dim:     #4a5368;
+      --radius:       14px;
+      --radius-sm:    8px;
+      --shadow:       0 8px 32px rgba(0,0,0,0.4);
+      --transition:   0.22s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      background: linear-gradient(135deg, #0d1220 0%, #111827 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 64px;
+    }
+    .logo-badge {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      border-radius: 10px;
+      width: 38px; height: 38px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px; color: #fff; flex-shrink: 0;
+    }
+    .header-title h1 {
+      font-size: 16px; font-weight: 700; color: var(--text-main);
+      line-height: 1.2;
+    }
+    .header-title p { font-size: 11px; color: var(--text-muted); }
+    .header-spacer { flex: 1; }
+    .header-badge {
+      background: rgba(79,142,247,0.12);
+      border: 1px solid rgba(79,142,247,0.25);
+      color: var(--accent);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 11px; font-weight: 600;
+    }
+
+    /* ─── LAYOUT ─── */
+    .page-wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    
+    body.has-compare .sidebar {
+      max-height: calc(100vh - 180px);
+    }
+    body.has-compare {
+      padding-bottom: 80px;
+    }
+
+    .sidebar-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--text-dim); text-transform: uppercase;
+      padding: 0 4px 6px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 4px;
+    }
+    .company-btn {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all var(--transition);
+      text-align: left; width: 100%;
+      font-family: inherit; font-size: 13px; font-weight: 500;
+    }
+    .company-btn:hover {
+      background: var(--bg-card2);
+      color: var(--text-main);
+      border-color: var(--border);
+    }
+    .company-btn.active {
+      background: linear-gradient(135deg, rgba(79,142,247,0.15) 0%, rgba(124,90,247,0.12) 100%);
+      border-color: rgba(79,142,247,0.3);
+      color: var(--accent);
+    }
+    .company-dot {
+      width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    }
+    .company-count {
+      margin-left: auto;
+      background: rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 1px 7px;
+      font-size: 10px;
+      color: var(--text-dim);
+    }
+    .company-btn.active .company-count {
+      background: rgba(79,142,247,0.15);
+      color: var(--accent);
+    }
+    
+    .company-logo {
+      width: 32px; height: 32px; object-fit: contain; border-radius: 4px; background: #fff; padding: 2px;
+    }
+    .company-logo-large {
+      width: 64px; height: 64px; object-fit: contain; border-radius: 8px; background: #fff; padding: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .company-resumo {
+      font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-top: 8px; max-width: 600px;
+    }
+
+    /* ─── MAIN CONTENT ─── */
+    .main-content { display: flex; flex-direction: column; gap: 28px; min-width: 0; }
+
+    /* ─── CONTROLS ─── */
+    .controls-bar {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .control-label {
+      font-size: 11px; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .toggle-group {
+      display: flex; gap: 4px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 3px;
+    }
+    .toggle-btn {
+      padding: 5px 14px;
+      border-radius: 5px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit; font-size: 12px; font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .toggle-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    .spacer { flex: 1; }
+    .total-chip {
+      background: rgba(46,203,150,0.1);
+      border: 1px solid rgba(46,203,150,0.25);
+      color: var(--accent3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 12px; font-weight: 600;
+    }
+
+    /* ─── SUMMARY CARDS ─── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .summary-card:hover {
+      border-color: rgba(79,142,247,0.3);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+    .summary-card .plan-name {
+      font-size: 12px; font-weight: 600; color: var(--text-main);
+      margin-bottom: 4px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .summary-card .acomodacao-tag {
+      font-size: 10px; color: var(--text-muted);
+      display: inline-flex; align-items: center; gap: 4px;
+      margin-bottom: 10px;
+    }
+    .tag-enf {
+      background: rgba(255,165,0,0.12);
+      color: #f5a623;
+      border-radius: 4px; padding: 1px 6px; font-size: 9px; font-weight: 700;
+    }
+    .tag-apt {
+      background: rgba(79,142,247,0.12);
+      color: var(--accent);
+      border-radius: 4px; padding: 1px 6px; font-size: 9px; font-weight: 700;
+    }
+    .summary-card .total-value {
+      font-size: 18px; font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+    }
+    .summary-card .total-label {
+      font-size: 10px; color: var(--text-muted); margin-top: 2px;
+    }
+    .summary-card.best-value {
+      border-color: rgba(46,203,150,0.4);
+      background: linear-gradient(135deg, rgba(46,203,150,0.05) 0%, var(--bg-card) 60%);
+    }
+    .best-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 9px; font-weight: 700; color: var(--accent3);
+      background: rgba(46,203,150,0.12);
+      border-radius: 4px; padding: 1px 6px;
+      margin-bottom: 8px;
+    }
+
+    /* ─── SECTION CARD ─── */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .section-card.sem-copar { border-top: 4px solid var(--accent3); }
+    .section-card.copar-parcial { border-top: 4px solid #f5a623; }
+    .section-card.copar-30 { border-top: 4px solid var(--accent); }
+
+    .section-header {
+      padding: 18px 24px;
+      background: rgba(0,0,0,0.15);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .icon-sem { background: rgba(46,203,150,0.12); }
+    .icon-cop { background: rgba(79,142,247,0.12); }
+    .icon-par { background: rgba(245,166,35,0.12); }
+    .section-title {
+      font-size: 16px; font-weight: 800; color: var(--text-main);
+    }
+    .section-subtitle {
+      font-size: 12px; color: var(--text-muted); margin-top: 2px;
+    }
+
+    .age-drawer {
+      border-top: 1px solid var(--border);
+      background: rgba(0,0,0,0.1);
+    }
+    .age-drawer summary {
+      padding: 16px 20px;
+      font-size: 13px; font-weight: 600; color: var(--text-main);
+      cursor: pointer; list-style: none;
+      display: flex; align-items: center; gap: 8px;
+      transition: background 0.2s;
+    }
+    .age-drawer summary:hover { background: rgba(255,255,255,0.03); }
+    .age-drawer summary::-webkit-details-marker { display: none; }
+    .age-drawer summary::before {
+      content: '▶'; font-size: 10px; color: var(--accent); transition: transform 0.2s;
+    }
+    .age-drawer[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .age-drawer[open] summary { border-bottom: 1px solid var(--border); }
+
+    /* ─── TABLE ─── */
+    .table-wrap {
+      overflow-x: auto;
+      padding: 0 0 2px;
+    }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 12.5px;
+      white-space: nowrap;
+    }
+    thead tr {
+      background: var(--bg-card2);
+    }
+    th {
+      padding: 10px 16px;
+      text-align: right;
+      font-weight: 600; color: var(--text-muted);
+      font-size: 11px; letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border);
+    }
+    th:first-child { text-align: left; }
+    .th-plan { 
+      color: var(--text-main); font-size: 12px; font-weight: 700;
+    }
+    .th-enf { color: #f5a623; }
+    .th-apt { color: var(--accent); }
+    tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: background var(--transition);
+    }
+    tbody tr:hover { background: rgba(255,255,255,0.025); }
+    tbody tr.total-row {
+      background: rgba(79,142,247,0.05);
+      border-top: 2px solid rgba(79,142,247,0.2);
+      border-bottom: none;
+    }
+    tbody tr.total-row td {
+      font-weight: 700; color: var(--text-main);
+      font-size: 13px;
+    }
+    td {
+      padding: 9px 16px;
+      text-align: right;
+      color: var(--text-muted);
+    }
+    td:first-child {
+      text-align: left;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+    .cell-value { color: var(--text-main); }
+    .cell-best {
+      color: var(--accent3);
+      font-weight: 700;
+      position: relative;
+    }
+    .cell-best::after {
+      content: '★';
+      font-size: 8px;
+      vertical-align: super;
+      margin-left: 2px;
+      opacity: 0.6;
+    }
+    .empty-state {
+      padding: 48px 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .empty-state .big-icon { font-size: 36px; margin-bottom: 12px; opacity: 0.4; }
+
+    /* ─── COMPANY HEADER ─── */
+    .company-header {
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card2) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      display: flex; align-items: center; gap: 20px;
+    }
+    .company-logo-circle {
+      width: 56px; height: 56px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 800; color: #fff; flex-shrink: 0;
+    }
+    .company-info h2 { font-size: 22px; font-weight: 800; color: var(--text-main); }
+    .company-info p { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+    .company-stats {
+      margin-left: auto;
+      display: flex; gap: 20px;
+    }
+    .stat-box {
+      text-align: center;
+    }
+    .stat-box .sv { font-size: 20px; font-weight: 800; color: var(--accent); }
+    .stat-box .sl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+      .company-stats { display: none; }
+    }
+    @media (max-width: 600px) {
+      .page-wrap { padding: 16px 12px; }
+      header { padding: 0 16px; }
+    }
+
+    /* ─── DIFERENCIAIS / OBSERVAÇÕES ─── */
+    .diferenciais-box {
+      margin-top: 24px; background: rgba(79, 142, 247, 0.05);
+      border: 1px solid rgba(79, 142, 247, 0.2); border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .diferenciais-title { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .diferenciais-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .diferenciais-list li { position: relative; padding-left: 16px; color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+    .diferenciais-list li::before { content: '•'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+    
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeInUp 0.35s ease both; }
+    .fade-in-delay { animation: fadeInUp 0.35s 0.05s ease both; }
+    .fade-in-delay2 { animation: fadeInUp 0.35s 0.1s ease both; }
+
+    /* ─── COMPARE FEATURE ─── */
+    .compare-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, #141927 0%, rgba(20,25,39,0.95) 100%);
+      backdrop-filter: blur(8px); border-top: 1px solid rgba(79,142,247,0.3);
+      padding: 16px 32px; display: flex; justify-content: space-between; align-items: center;
+      z-index: 200; transform: translateY(100%); transition: transform var(--transition);
+    }
+    .compare-bar.show { transform: translateY(0); }
+    .compare-bar-info { display: flex; align-items: center; gap: 12px; }
+    .compare-badge { background: var(--accent); color: white; padding: 4px 10px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+    .btn-compare-action { background: var(--accent); color: #fff; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .btn-compare-action:hover { background: #3b76e2; }
+    .btn-compare-action.secondary { background: rgba(255,255,255,0.1); }
+    .btn-compare-action.secondary:hover { background: rgba(255,255,255,0.15); }
+    .compare-toggle-btn {
+      margin-top: 14px; width: 100%; background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+      color: var(--text-muted); padding: 8px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: var(--transition);
+    }
+    .compare-toggle-btn.active { background: rgba(46, 203, 150, 0.15); border-color: var(--accent3); color: var(--accent3); }
+    .compare-toggle-btn:hover { border-color: var(--text-muted); color: var(--text-main); }
+    #compare-view { display: none; padding-bottom: 100px; }
+    .compare-table-wrap {
+      width: 100%; overflow-x: auto; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--border);
+    }
+    .compare-table {
+      width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top; font-size: 13px;
+    }
+    .compare-table th {
+      background: var(--bg-card2); font-weight: 600; color: var(--text-main);
+    }
+    .compare-table th:first-child, .compare-table td:first-child {
+      position: sticky; left: 0; background: var(--bg-card2); z-index: 10; font-weight: 600; color: var(--text-muted); min-width: 180px; border-right: 2px solid rgba(255,255,255,0.1);
+    }
+    .compare-table th:first-child { z-index: 20; }
+    .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .compare-table tr:hover td:first-child { background: var(--bg-card2); }
+    
+    .compare-table .val-total { font-size: 18px; font-weight: 800; color: var(--accent); }
+    .compare-table .best-total { color: var(--accent3); }
+    
+    .comp-plan-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+    .comp-plan-header img { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; padding: 4px; }
+    .comp-plan-header h3 { font-size: 15px; margin: 0; line-height: 1.2; }
+    .comp-plan-header .comp-op { font-size: 11px; color: var(--text-muted); }
+    
+    .compare-section-title {
+      background: rgba(255,255,255,0.03); color: var(--text-main) !important; font-size: 13px; font-weight: 700 !important; text-transform: uppercase; letter-spacing: 0.05em; padding: 12px 16px !important;
+    }
+    .remove-compare-btn { background: none; border: none; color: #e74c3c; cursor: pointer; font-size: 12px; margin-top: 12px; text-decoration: underline; width: 100%; text-align: center; }
+
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text-main); padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; font-size: 12px; }
+    .btn-outline:hover { background: rgba(255,255,255,0.05); border-color: var(--text-muted); }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-badge">F</div>
+    <div class="header-title">
+      <h1>Estudo de Planos de Saúde</h1>
+      <p>Grupo Salus · 66 vidas · 2026</p>
+    </div>
+    <div class="header-spacer"></div>
+    <span class="header-badge">FBN RE Corretora</span>
+  </div>
+</header>
+
+<div class="page-wrap" id="main-layout">
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-label">Operadoras</div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content" id="main-content">
+    <div class="empty-state">
+      <p>Selecione uma operadora no painel ao lado.</p>
+    </div>
+  </main>
+</div>
+
+<!-- COMPARE VIEW -->
+<div class="page-wrap fade-in" id="compare-view"></div>
+
+<!-- COMPARE BAR -->
+<div class="compare-bar" id="compare-bar">
+  <div class="compare-bar-info">
+    <div class="compare-badge" id="compare-count">0</div>
+    <div>Planos selecionados para comparar</div>
+  </div>
+  <div style="display:flex; gap:12px">
+    <button class="btn-compare-action secondary" onclick="clearCompare()">Limpar</button>
+    <button class="btn-compare-action" id="btn-compare-action" onclick="toggleCompareView()">Ver Comparação</button>
+  </div>
+</div>
+
+<script>
+// ───────────────────────────────────────────────
+//  RAW DATA  (extracted from XLSX)
+// ───────────────────────────────────────────────
+const COMPANIES = [
+  {
+    company: "Amil Bronze",
+    color: "#e74c3c",
+    domain: "amil.com.br",
+    resumo: "Ampla rede própria e credenciada com hospitais de excelência e forte atuação em telemedicina. Ótimo para quem busca cobertura nacional robusta.",
+    redes: [
+      { label: "Hospitais", file: "Rede/Amil bronze.pdf" },
+      { label: "Laboratórios", file: "Rede/amil lab linha bronze.pdf" }
+    ],
+    diferenciais: [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Aceitação de idade e análise de redução de carências até 69 anos",
+      "Contratação somente na modalidade com coparticipação"
+    ],
+    sections: [
+      {
+        name: "COPARTICIPAÇÃO PARCIAL",
+        tables: [
+          {
+            plans: ["Bronze", "Bronze Mais"],
+            acomodacao: ["Enf.", "Enf."],
+            abrangencia: ["Regional", "Regional"],
+            reembolso: ["···", "···"],
+            total: [21472.84, 25991.34],
+            age_data: [
+              { label: "0 a 18",    values: [168.25, 203.65] },
+              { label: "19 a 23",   values: [228.48, 276.56] },
+              { label: "24 a 28",   values: [268.21, 324.65] },
+              { label: "29 a 33",   values: [268.21, 324.65] },
+              { label: "34 a 38",   values: [268.21, 324.65] },
+              { label: "39 a 43",   values: [299.59, 362.63] },
+              { label: "44 a 48",   values: [413.73, 500.79] },
+              { label: "49 a 53",   values: [493.99, 597.94] },
+              { label: "54 a 58",   values: [710.36, 859.84] },
+              { label: "59 ou mais",values: [1007.29, 1219.25] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Bronze", "Bronze Mais"],
+            acomodacao: ["Enf.", "Enf."],
+            abrangencia: ["Regional", "Regional"],
+            reembolso: ["···", "···"],
+            total: [16105.71, 19493.87],
+            age_data: [
+              { label: "0 a 18",    values: [126.19, 152.74] },
+              { label: "19 a 23",   values: [171.37, 207.42] },
+              { label: "24 a 28",   values: [201.17, 243.49] },
+              { label: "29 a 33",   values: [201.17, 243.49] },
+              { label: "34 a 38",   values: [201.17, 243.49] },
+              { label: "39 a 43",   values: [224.71, 271.98] },
+              { label: "44 a 48",   values: [310.32, 375.60] },
+              { label: "49 a 53",   values: [370.52, 448.47] },
+              { label: "54 a 58",   values: [532.81, 644.90] },
+              { label: "59 ou mais",values: [755.52, 914.47] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Linha Amil",
+    color: "#e67e22",
+    domain: "amil.com.br",
+    resumo: "Ampla rede própria e credenciada com hospitais de excelência e forte atuação em telemedicina. Ótimo para quem busca cobertura nacional robusta.",
+    diferenciais: [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Aceitação de idade e análise de redução de carências até 69 anos",
+      "Contratação somente na modalidade com coparticipação parcial"
+    ],
+    sections: [
+      {
+        name: "COPARTICIPAÇÃO PARCIAL",
+        tables: [
+          {
+            plans: ["Amil Prata II", "Amil Prata II.", "Amil Prata", "Amil Prata.", "Amil Ouro", "Amil Ouro.", "Amil Ouro II", "Platinum R1", "Platinum R2"],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["**", "**", "**", "**", "R$ 96,00", "R$ 96,00", "R$ 80,00", "R$ 240,00", "R$ 328,00"],
+            total: [36740.90, 40785.62, 42777.91, 47481.69, 48190.86, 53493.26, 59239.26, 81983.86, 82797.85],
+            age_data: [
+              { label: "0 a 18",    values: [281.88, 312.89, 328.17, 364.26, 369.70, 410.38, 454.45, 628.94, 635.19] },
+              { label: "19 a 23",   values: [329.80, 366.08, 383.96, 426.18, 432.55, 480.14, 531.71, 735.86, 743.17] },
+              { label: "24 a 28",   values: [402.36, 446.62, 468.43, 519.94, 527.71, 585.77, 648.69, 897.75, 906.67] },
+              { label: "29 a 33",   values: [482.83, 535.94, 562.12, 623.93, 633.25, 702.92, 778.43, 1077.30, 1088.00] },
+              { label: "34 a 38",   values: [506.97, 562.74, 590.23, 655.13, 664.91, 738.07, 817.35, 1131.17, 1142.40] },
+              { label: "39 a 43",   values: [557.67, 619.01, 649.25, 720.64, 731.40, 811.88, 899.09, 1244.29, 1256.64] },
+              { label: "44 a 48",   values: [697.09, 773.76, 811.56, 900.80, 914.25, 1014.85, 1123.86, 1555.36, 1570.80] },
+              { label: "49 a 53",   values: [766.80, 851.14, 892.72, 990.88, 1005.68, 1116.34, 1236.25, 1710.90, 1727.88] },
+              { label: "54 a 58",   values: [958.50, 1063.93, 1115.90, 1238.60, 1257.10, 1395.43, 1545.31, 2138.63, 2159.85] },
+              { label: "59 ou mais",values: [1677.38, 1861.88, 1952.83, 2167.55, 2199.93, 2442.00, 2704.29, 3742.60, 3779.74] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Amil Prata II", "Amil Prata II.", "Amil Prata", "Amil Prata.", "Amil Ouro", "Amil Ouro.", "Amil Ouro II", "Platinum R1", "Platinum R2"],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["**", "**", "**", "**", "R$ 96,00", "R$ 96,00", "R$ 80,00", "R$ 240,00", "R$ 328,00"],
+            total: [27559.51, 30591.94, 32082.84, 35614.49, 36144.19, 40122.73, 44429.33, 61489.54, 62099.88],
+            age_data: [
+              { label: "0 a 18",    values: [211.42, 234.68, 246.13, 273.21, 277.28, 307.80, 340.85, 471.72, 476.40] },
+              { label: "19 a 23",   values: [247.36, 274.58, 287.97, 319.66, 324.42, 360.13, 398.79, 551.91, 557.39] },
+              { label: "24 a 28",   values: [301.78, 334.99, 351.32, 389.99, 395.79, 439.36, 486.52, 673.33, 680.02] },
+              { label: "29 a 33",   values: [362.14, 401.99, 421.58, 467.99, 474.95, 527.23, 583.82, 808.00, 816.02] },
+              { label: "34 a 38",   values: [380.25, 422.09, 442.66, 491.39, 498.70, 553.59, 613.01, 848.40, 856.82] },
+              { label: "39 a 43",   values: [418.28, 464.30, 486.93, 540.53, 548.57, 608.95, 674.31, 933.24, 942.50] },
+              { label: "44 a 48",   values: [522.85, 580.38, 608.66, 675.66, 685.71, 761.19, 842.89, 1166.55, 1178.13] },
+              { label: "49 a 53",   values: [575.14, 638.42, 669.53, 743.23, 754.28, 837.31, 927.18, 1283.21, 1295.94] },
+              { label: "54 a 58",   values: [718.93, 798.03, 836.91, 929.04, 942.85, 1046.64, 1158.98, 1604.01, 1619.93] },
+              { label: "59 ou mais",values: [1258.13, 1396.55, 1464.59, 1625.82, 1649.99, 1831.62, 2028.22, 2807.02, 2834.88] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Amil Selecionada",
+    color: "#e67e22",
+    domain: "amil.com.br",
+    resumo: "Ampla rede própria e credenciada com hospitais de excelência e forte atuação em telemedicina. Ótimo para quem busca cobertura nacional robusta.",
+    redes: [
+      { label: "Rede Credenciada", file: "Rede/amil selecionada.pdf" }
+    ],
+    diferenciais: [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Aceitação de idade e análise de redução de carências até 69 anos",
+      "Contratação somente na modalidade com coparticipação parcial"
+    ],
+    sections: [
+      {
+        name: "COPARTICIPAÇÃO PARCIAL",
+        tables: [
+          {
+            plans: ["Amil S380", "Amil S380.", "Amil S450", "Amil S450.", "Amil S750 R1", "Amil S750 R2", "Amil S750 R3"],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 80,00", "R$ 80,00", "R$ 96,00", "R$ 96,00", "R$ 136,00", "R$ 240,00", "R$ 328,00"],
+            total: [45168.30, 50138.90, 57782.62, 64137.75, 76331.61, 77090.51, 83256.52],
+            age_data: [
+              { label: "0 a 18",    values: [346.51, 384.64, 443.28, 492.03, 585.58, 531.40, 638.71] },
+              { label: "19 a 23",   values: [405.42, 450.03, 518.64, 575.68, 685.13, 691.94, 747.29] },
+              { label: "24 a 28",   values: [494.61, 549.04, 632.74, 702.33, 835.86, 844.17, 911.69] },
+              { label: "29 a 33",   values: [593.53, 658.85, 759.29, 842.80, 1003.03, 1013.00, 1094.03] },
+              { label: "34 a 38",   values: [623.21, 691.79, 797.25, 884.94, 1053.18, 1063.65, 1148.73] },
+              { label: "39 a 43",   values: [685.53, 760.97, 876.98, 973.43, 1158.50, 1170.02, 1263.60] },
+              { label: "44 a 48",   values: [856.91, 951.21, 1096.23, 1216.79, 1448.13, 1462.53, 1579.50] },
+              { label: "49 a 53",   values: [942.60, 1046.33, 1205.85, 1336.47, 1592.94, 1608.78, 1737.45] },
+              { label: "54 a 58",   values: [1178.25, 1307.91, 1507.31, 1673.09, 1991.18, 2010.98, 2171.81] },
+              { label: "59 ou mais",values: [2061.94, 2288.84, 2637.79, 2927.91, 3484.57, 3519.22, 3800.67] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Amil S380", "Amil S380.", "Amil S450", "Amil S450.", "Amil S750 R1", "Amil S750 R2", "Amil S750 R3"],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 80,00", "R$ 80,00", "R$ 96,00", "R$ 96,00", "R$ 136,00", "R$ 240,00", "R$ 328,00"],
+            total: [33875.83, 37603.17, 43337.99, 48104.28, 57249.05, 57819.45, 62444.86],
+            age_data: [
+              { label: "0 a 18",    values: [259.88, 288.48, 332.47, 369.03, 439.19, 443.56, 479.04] },
+              { label: "19 a 23",   values: [304.06, 337.52, 388.99, 431.77, 513.85, 518.97, 560.48] },
+              { label: "24 a 28",   values: [370.95, 411.77, 474.57, 526.76, 626.90, 633.14, 683.79] },
+              { label: "29 a 33",   values: [445.14, 494.12, 569.48, 632.11, 752.28, 759.77, 820.55] },
+              { label: "34 a 38",   values: [467.40, 518.83, 597.95, 663.72, 789.89, 797.76, 861.58] },
+              { label: "39 a 43",   values: [514.14, 570.71, 657.75, 730.09, 868.88, 877.54, 947.74] },
+              { label: "44 a 48",   values: [642.68, 713.39, 822.19, 912.61, 1086.10, 1096.93, 1184.68] },
+              { label: "49 a 53",   values: [706.95, 784.73, 904.41, 1003.87, 1194.71, 1206.62, 1303.15] },
+              { label: "54 a 58",   values: [883.69, 980.91, 1130.51, 1254.84, 1493.39, 1508.28, 1628.94] },
+              { label: "59 ou mais",values: [1546.46, 1716.59, 1978.39, 2195.97, 2613.43, 2639.49, 2850.65] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "HapVida Smart",
+    color: "#f39c12",
+    domain: "hapvida.com.br",
+    resumo: "Excelente custo-benefício com forte verticalização da rede (hospitais próprios), garantindo eficiência e mensalidades mais baixas.",
+    diferenciais: [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório ou Livre Adesão",
+      "Vigência de 12 meses",
+      "Aceitação de titulares até 74 anos, análise de redução de carências até 64 anos"
+    ],
+    sections: [
+      {
+        name: "COPARTICIPAÇÃO PARCIAL",
+        tables: [
+          {
+            plans: ["Smart 200 Up Enf.", "Smart 300 Apt.", "Smart 500 Enf.", "Smart 500 Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt."],
+            abrangencia: ["Regional","Regional","Regional","Regional"],
+            reembolso: ["**", "**", "**", "**"],
+            total: [18700.00, 26327.62, 28419.07, 30914.43],
+            age_data: [
+              { label: "0 a 18",    values: [144.38, 199.25, 215.09, 233.97] },
+              { label: "19 a 23",   values: [194.86, 268.95, 290.32, 315.81] },
+              { label: "24 a 28",   values: [230.32, 317.85, 343.10, 373.23] },
+              { label: "29 a 33",   values: [230.32, 332.09, 358.47, 389.95] },
+              { label: "34 a 38",   values: [230.32, 343.18, 370.45, 402.97] },
+              { label: "39 a 43",   values: [273.54, 377.50, 407.49, 443.27] },
+              { label: "44 a 48",   values: [355.61, 490.76, 529.74, 576.25] },
+              { label: "49 a 53",   values: [462.29, 637.99, 688.66, 749.13] },
+              { label: "54 a 58",   values: [600.99, 829.39, 895.26, 973.87] },
+              { label: "59 ou mais",values: [866.19, 1195.40, 1290.34, 1403.64] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO TOTAL 30%",
+        tables: [
+          {
+            plans: ["Smart 200 Up Enf.", "Smart 300 Apt.", "Smart 500 Enf.", "Smart 500 Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt."],
+            abrangencia: ["Regional","Regional","Regional","Regional"],
+            reembolso: ["**", "**", "**", "**"],
+            total: [14025.68, 18428.02, 21314.87, 23185.11],
+            age_data: [
+              { label: "0 a 18",    values: [108.29, 139.48, 161.31, 175.48] },
+              { label: "19 a 23",   values: [146.16, 188.26, 217.74, 236.86] },
+              { label: "24 a 28",   values: [172.75, 222.48, 257.33, 279.92] },
+              { label: "29 a 33",   values: [172.75, 232.45, 268.86, 292.45] },
+              { label: "34 a 38",   values: [205.17, 240.21, 277.84, 302.22] },
+              { label: "39 a 43",   values: [205.17, 264.23, 305.63, 332.44] },
+              { label: "44 a 48",   values: [266.72, 343.50, 397.32, 432.17] },
+              { label: "49 a 53",   values: [346.73, 446.55, 516.51, 561.83] },
+              { label: "54 a 58",   values: [450.76, 580.52, 671.47, 730.37] },
+              { label: "59 ou mais",values: [649.65, 836.70, 967.79, 1052.69] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "HapVida Advance",
+    color: "#f39c12",
+    domain: "hapvida.com.br",
+    resumo: "Excelente custo-benefício com forte verticalização da rede (hospitais próprios), garantindo eficiência e mensalidades mais baixas.",
+    diferenciais: [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório ou Livre Adesão",
+      "Vigência de 12 meses",
+      "Aceitação de titulares até 74 anos, análise de redução de carências até 64 anos",
+      "Contratação somente na modalidade com coparticipação"
+    ],
+    sections: [
+      {
+        name: "COPARTICIPAÇÃO PARCIAL",
+        tables: [
+          {
+            plans: ["Advance 600 Enf.", "Advance 600 Apt.", "Advance 700 Enf.", "Advance 700 Apt.", "Premium 900 Apt.", "Premium Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 75,00", "R$ 75,00", "R$ 75,00", "R$ 75,00", "R$ 240,00", "R$ 240,00"],
+            total: [35417.83, 39315.65, 46782.47, 51930.33, 76221.89, 80300.58],
+            age_data: [
+              { label: "0 a 18",    values: [269.89, 299.59, 356.49, 395.72, 580.83, 611.92] },
+              { label: "19 a 23",   values: [315.77, 350.52, 417.09, 462.99, 679.56, 715.93] },
+              { label: "24 a 28",   values: [385.24, 427.63, 508.84, 564.84, 829.06, 873.42] },
+              { label: "29 a 33",   values: [462.29, 513.17, 610.62, 677.81, 994.89, 1048.12] },
+              { label: "34 a 38",   values: [485.41, 538.83, 641.17, 711.71, 1044.64, 1100.54] },
+              { label: "39 a 43",   values: [533.94, 592.71, 705.28, 782.88, 1149.09, 1210.58] },
+              { label: "44 a 48",   values: [667.43, 740.88, 881.60, 978.62, 1436.36, 1513.23] },
+              { label: "49 a 53",   values: [806.97, 895.78, 1065.92, 1183.22, 1736.65, 1829.59] },
+              { label: "54 a 58",   values: [1009.40, 1120.47, 1333.28, 1480.01, 2172.28, 2288.53] },
+              { label: "59 ou mais",values: [1605.97, 1782.69, 2121.28, 2354.73, 3456.13, 3641.08] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO TOTAL 30%",
+        tables: [
+          {
+            plans: ["Advance 600 Enf.", "Advance 600 Apt.", "Advance 700 Enf.", "Advance 700 Apt.", "Premium 900 Apt.", "Premium Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 75,00", "R$ 75,00", "R$ 75,00", "R$ 75,00", "R$ 240,00", "R$ 240,00"],
+            total: [26564.82, 29487.08, 35089.36, 38949.13, 57049.16, 60222.00],
+            age_data: [
+              { label: "0 a 18",    values: [202.42, 224.69, 267.39, 296.80, 434.73, 458.91] },
+              { label: "19 a 23",   values: [236.84, 262.89, 312.84, 347.25, 508.63, 536.92] },
+              { label: "24 a 28",   values: [288.94, 320.72, 381.66, 423.65, 620.52, 655.04] },
+              { label: "29 a 33",   values: [346.74, 384.87, 458.00, 508.38, 744.63, 786.05] },
+              { label: "34 a 38",   values: [364.07, 404.13, 480.91, 533.81, 781.86, 825.35] },
+              { label: "39 a 43",   values: [400.48, 444.54, 528.99, 587.18, 860.05, 907.88] },
+              { label: "44 a 48",   values: [500.60, 555.68, 661.25, 733.98, 1075.07, 1134.85] },
+              { label: "49 a 53",   values: [605.27, 671.86, 799.50, 887.43, 1299.84, 1372.11] },
+              { label: "54 a 58",   values: [757.10, 840.39, 1000.04, 1110.03, 1625.89, 1716.29] },
+              { label: "59 ou mais",values: [1204.55, 1337.07, 1591.08, 1766.08, 2586.82, 2730.64] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Linha Porto Saúde",
+    color: "#3498db",
+    domain: "portoseguro.com.br",
+    resumo: "Atendimento premium com autorizações ágeis e forte programa de medicina preventiva, além de descontos em outros seguros do grupo.",
+    redes: [
+      { label: "Linha Pro", file: "Rede/rede porto linha pro.pdf" }
+    ],
+    diferenciais: [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Aceitação de titulares e análise de redução de carências até 73 anos"
+    ],
+    sections: [
+      {
+        name: "SEM COPARTICIPAÇÃO",
+        tables: [
+          {
+            plans: ["P220 QC Enf.", "P220 QP Apt.", "P320 QC Enf.", "P320 QP Apt.", "P420 QP Apt.", "P470 QP Apt.", "P520 QP Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 90,00", "R$ 95,00", "R$ 95,00", "R$ 95,00", "R$ 152,00", "R$ 200,00", "R$ 294,00"],
+            total: [32404.47, 35937.92, 35111.37, 39034.06, 51562.18, 57726.25, 123432.51],
+            age_data: [
+              { label: "0 a 18",    values: [260.52, 288.93, 282.28, 313.82, 414.54, 464.10, 992.35] },
+              { label: "19 a 23",   values: [315.94, 350.39, 342.33, 380.57, 502.72, 562.82, 1203.44] },
+              { label: "24 a 28",   values: [381.13, 422.68, 412.96, 459.10, 606.45, 678.95, 1451.75] },
+              { label: "29 a 33",   values: [436.32, 483.90, 472.77, 525.59, 694.28, 777.28, 1662.01] },
+              { label: "34 a 38",   values: [472.76, 524.31, 512.25, 569.48, 752.26, 842.19, 1800.80] },
+              { label: "39 a 43",   values: [488.24, 541.48, 529.03, 588.13, 776.89, 869.76, 1859.76] },
+              { label: "44 a 48",   values: [583.21, 646.81, 631.93, 702.53, 928.01, 1038.95, 2221.53] },
+              { label: "49 a 53",   values: [627.85, 696.32, 680.30, 756.31, 999.04, 1118.47, 2391.57] },
+              { label: "54 a 58",   values: [775.76, 860.35, 840.56, 934.47, 1234.39, 1381.96, 2954.96] },
+              { label: "59 ou mais",values: [1303.99, 1446.18, 1412.92, 1570.77, 2074.91, 2322.96, 4967.05] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO TOTAL 30%",
+        tables: [
+          {
+            plans: ["P220 QC Enf.", "P220 QP Apt.", "P320 QC Enf.", "P320 QP Apt.", "P420 QP Apt.", "P470 QP Apt.", "P520 QP Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 90,00", "R$ 95,00", "R$ 95,00", "R$ 95,00", "R$ 152,00", "R$ 200,00", "R$ 294,00"],
+            total: [23331.12, 25875.22, 26333.60, 29275.61, 41249.51, 46180.92, 104917.73],
+            age_data: [
+              { label: "0 a 18",    values: [187.57, 208.03, 211.71, 235.37, 331.63, 371.28, 843.50] },
+              { label: "19 a 23",   values: [227.47, 252.28, 256.75, 285.43, 402.17, 450.25, 1022.92] },
+              { label: "24 a 28",   values: [274.41, 304.33, 309.72, 344.33, 485.16, 543.16, 1233.99] },
+              { label: "29 a 33",   values: [314.15, 348.41, 354.58, 394.19, 555.42, 621.82, 1412.71] },
+              { label: "34 a 38",   values: [340.39, 377.50, 384.19, 427.11, 601.80, 673.75, 1530.68] },
+              { label: "39 a 43",   values: [351.53, 389.86, 396.77, 441.10, 621.51, 695.81, 1580.80] },
+              { label: "44 a 48",   values: [419.91, 465.70, 473.95, 526.90, 742.41, 831.16, 1888.30] },
+              { label: "49 a 53",   values: [452.05, 501.35, 510.23, 567.23, 799.23, 894.78, 2032.83] },
+              { label: "54 a 58",   values: [558.55, 619.45, 630.42, 700.85, 987.51, 1105.57, 2511.72] },
+              { label: "59 ou mais",values: [938.87, 1041.25, 1059.69, 1178.08, 1659.92, 1858.37, 4222.00] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Porto Seguro",
+    color: "#2980b9",
+    domain: "portoseguro.com.br",
+    resumo: "Atendimento premium com autorizações ágeis e forte programa de medicina preventiva, além de descontos em outros seguros do grupo.",
+    redes: [
+      { label: "Linha Pro", file: "Rede/rede porto linha pro.pdf" }
+    ],
+    diferenciais: [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Aceitação de titulares e análise de redução de carências até 75 anos",
+      "Não aceita MEI"
+    ],
+    sections: [
+      {
+        name: "SEM COPARTICIPAÇÃO",
+        tables: [
+          {
+            plans: ["Bronze Brasil I Enf.", "Bronze Brasil I Apt.", "Prata I Enf.", "Prata I Apt.", "Ouro Mais I Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional"],
+            total: [41882.55, 47717.52, 45654.75, 50392.04, 74049.24],
+            age_data: [
+              { label: "0 a 18",    values: [356.76, 406.46, 381.68, 421.28, 619.26] },
+              { label: "19 a 23",   values: [445.95, 508.08, 477.10, 526.60, 774.08] },
+              { label: "24 a 28",   values: [553.12, 630.27, 591.76, 653.06, 959.35] },
+              { label: "29 a 33",   values: [614.15, 699.68, 657.05, 725.40, 1065.60] },
+              { label: "34 a 38",   values: [665.62, 757.89, 712.24, 786.22, 1155.04] },
+              { label: "39 a 43",   values: [771.88, 879.25, 826.48, 912.08, 1340.05] },
+              { label: "44 a 48",   values: [922.60, 1051.25, 987.88, 1090.14, 1601.83] },
+              { label: "49 a 53",   values: [1081.80, 1232.78, 1158.52, 1278.77, 1879.63] },
+              { label: "54 a 58",   values: [1287.88, 1467.53, 1379.83, 1522.64, 2237.24] },
+              { label: "59 ou mais",values: [2170.01, 2472.90, 2324.34, 2564.88, 3769.29] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Bronze Brasil I Enf.", "Bronze Brasil I Apt.", "Prata I Enf.", "Prata I Apt.", "Ouro Mais I Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional"],
+            total: [29317.75, 33402.25, 35154.32, 38801.79, 59239.40],
+            age_data: [
+              { label: "0 a 18",    values: [235.70, 268.54, 282.63, 311.95, 476.26] },
+              { label: "19 a 23",   values: [285.84, 325.66, 342.75, 378.31, 577.57] },
+              { label: "24 a 28",   values: [344.82, 392.86, 413.47, 456.37, 696.75] },
+              { label: "29 a 33",   values: [394.76, 449.76, 473.35, 522.46, 797.65] },
+              { label: "34 a 38",   values: [427.73, 487.32, 512.88, 566.09, 864.27] },
+              { label: "39 a 43",   values: [441.73, 503.27, 529.67, 584.63, 892.56] },
+              { label: "44 a 48",   values: [527.66, 601.17, 632.70, 698.35, 1066.19] },
+              { label: "49 a 53",   values: [568.05, 647.19, 681.13, 751.81, 1147.80] },
+              { label: "54 a 58",   values: [701.86, 799.65, 841.59, 928.91, 1418.18] },
+              { label: "59 ou mais",values: [1179.78, 1344.14, 1414.64, 1561.43, 2383.86] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "SulAmérica",
+    color: "#9b59b6",
+    domain: "sulamerica.com.br",
+    resumo: "Tradição em alto padrão com uma das melhores redes credenciadas do país. Destaque para o sistema de reembolso rápido e descomplicado.",
+    redes: [
+      { label: "Rede Credenciada", file: "Rede/sulamerica.pdf" }
+    ],
+    diferenciais: [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Sem limite de idade de titulares. Análise para redução de carências até 67 anos",
+      "Plano Direto: Reembolso apenas para urgência/emergência",
+      "Plano Clássico e Especial 100: urgência/emergência e consultas eletivas",
+      "Plano Especial 100 R1/R2/R3/Prestige: urgência/emergência, eletivas e honorários",
+      "Linha Vital: Não possui atendimento Leforte, São Cristóvão, 9 de Julho, Santa Paula, Samaritano e Alvorada",
+      "Especial Mais: Atendimento Vila Nova Star e Laboratório Alta"
+    ],
+    sections: [
+      {
+        name: "SEM COPARTICIPAÇÃO",
+        tables: [
+          {
+            plans: ["Direto Enf.", "Direto Apt.", "Clássico Vital Enf.", "Clássico 100 Enf.", "Especial Vital Apt.", "Especial 100 R1 Apt.", "Especial Mais Vital Apt.", "Especial Mais Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 90,00", "R$ 90,00", "R$ 110,25", "R$ 110,25", "R$ 150,30", "R$ 180,00", "R$ 330,75", "R$ 330,75"],
+            total: [43163.36, 47876.20, 48805.84, 54228.62, 53340.64, 62386.36, 72884.34, 80982.51],
+            age_data: [
+              { label: "0 a 18",    values: [310.84, 344.78, 351.48, 390.53, 384.14, 449.28, 524.88, 583.20] },
+              { label: "19 a 23",   values: [388.55, 430.98, 439.35, 488.16, 480.17, 561.60, 656.10, 729.00] },
+              { label: "24 a 28",   values: [481.81, 534.42, 544.79, 605.32, 595.41, 696.39, 813.57, 903.97] },
+              { label: "29 a 33",   values: [534.81, 593.20, 604.72, 671.91, 660.91, 772.99, 903.06, 1003.40] },
+              { label: "34 a 38",   values: [572.24, 634.72, 647.05, 718.94, 707.17, 827.09, 966.27, 1073.63] },
+              { label: "39 a 43",   values: [663.80, 736.28, 750.58, 833.98, 820.32, 959.43, 1120.88, 1245.42] },
+              { label: "44 a 48",   values: [793.51, 880.15, 897.24, 996.93, 980.61, 1146.90, 1339.90, 1488.78] },
+              { label: "49 a 53",   values: [929.99, 1031.53, 1051.57, 1168.40, 1149.27, 1344.17, 1570.36, 1744.84] },
+              { label: "54 a 58",   values: [1107.15, 1228.04, 1251.89, 1390.98, 1368.20, 1600.23, 1869.50, 2077.23] },
+              { label: "59 ou mais",values: [1864.99, 2068.64, 2108.81, 2343.11, 2304.75, 2695.60, 3149.19, 3499.11] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Direto Enf.", "Direto Apt.", "Clássico Vital Enf.", "Clássico 100 Enf.", "Especial Vital Apt.", "Especial 100 R1 Apt.", "Especial Mais Vital Apt.", "Especial Mais Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Enf.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 90,00", "R$ 90,00", "R$ 110,25", "R$ 110,25", "R$ 150,30", "R$ 180,00", "R$ 330,75", "R$ 330,75"],
+            total: [30214.47, 33513.09, 36603.99, 40671.85, 40005.51, 46789.72, 54662.99, 60736.95],
+            age_data: [
+              { label: "0 a 18",    values: [217.59, 241.35, 263.61, 292.90, 288.10, 336.96, 393.66, 437.40] },
+              { label: "19 a 23",   values: [271.99, 301.68, 329.51, 366.12, 360.13, 421.20, 492.07, 546.75] },
+              { label: "24 a 28",   values: [337.27, 374.09, 408.59, 454.00, 446.56, 522.29, 610.17, 677.97] },
+              { label: "29 a 33",   values: [374.37, 415.24, 453.54, 503.94, 495.68, 579.74, 677.29, 752.55] },
+              { label: "34 a 38",   values: [400.57, 444.30, 485.28, 539.21, 530.38, 620.32, 724.70, 805.23] },
+              { label: "39 a 43",   values: [464.66, 515.40, 562.93, 625.49, 615.24, 719.57, 840.66, 934.07] },
+              { label: "44 a 48",   values: [555.46, 616.10, 672.92, 747.00, 735.46, 860.18, 1004.92, 1116.58] },
+              { label: "49 a 53",   values: [651.00, 722.07, 788.66, 876.31, 861.95, 1008.12, 1177.76, 1308.63] },
+              { label: "54 a 58",   values: [775.01, 859.63, 938.90, 1043.24, 1026.15, 1200.17, 1402.12, 1557.92] },
+              { label: "59 ou mais",values: [1305.51, 1448.04, 1581.59, 1757.35, 1728.56, 2021.69, 2361.88, 2624.33] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Bradesco",
+    color: "#c0392b",
+    domain: "bradescoseguros.com.br",
+    resumo: "Foco exclusivo no público corporativo corporativo (PME), oferecendo grande solidez, flexibilidade de rede e um sistema de reembolso de referência no mercado.",
+    redes: [
+      { label: "Hospitais", file: "Rede/rede crenciada bradesco hopsitais.pdf" },
+      { label: "Laboratórios", file: "Rede/rede crenciada bradesco laboratórios.pdf" }
+    ],
+    diferenciais: [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Sem limite de idade para aceitação. Análise de redução de carências até 67 anos"
+    ],
+    sections: [
+      {
+        name: "SEM COPARTICIPAÇÃO",
+        tables: [
+          {
+            plans: ["Efetivo Enf.", "Efetivo Apt.", "Efetivo Plus Enf.", "Efetivo Plus Apt.", "Nacional II Enf.", "Nacional III Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Enf.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 109,76", "R$ 109,76", "R$ 109,76", "R$ 109,76", "R$ 109,76", "R$ 109,76"],
+            total: [50165.81, 54178.49, 52672.24, 56889.14, 68011.31, 73762.41],
+            age_data: [
+              { label: "0 a 18",    values: [377.41, 407.61, 396.27, 428.00, 511.68, 554.94] },
+              { label: "19 a 23",   values: [445.35, 480.98, 467.60, 505.04, 603.77, 654.83] },
+              { label: "24 a 28",   values: [538.87, 581.98, 565.79, 611.09, 730.56, 792.34] },
+              { label: "29 a 33",   values: [646.65, 698.37, 678.96, 733.31, 876.68, 950.81] },
+              { label: "34 a 38",   values: [737.17, 796.14, 774.00, 835.97, 999.41, 1083.92] },
+              { label: "39 a 43",   values: [759.29, 820.02, 797.22, 861.05, 1029.39, 1116.44] },
+              { label: "44 a 48",   values: [924.48, 998.42, 970.67, 1048.38, 1253.34, 1359.33] },
+              { label: "49 a 53",   values: [1087.37, 1174.34, 1141.71, 1233.11, 1474.18, 1598.84] },
+              { label: "54 a 58",   values: [1293.96, 1397.46, 1358.63, 1467.39, 1754.28, 1902.61] },
+              { label: "59 ou mais",values: [2264.31, 2445.43, 2377.46, 2567.79, 3069.81, 3329.38] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Efetivo Enf.", "Efetivo Apt.", "Efetivo Plus Enf.", "Efetivo Plus Apt.", "Nacional II Enf.", "Nacional III Apt."],
+            acomodacao: ["Enf.", "Apt.", "Enf.", "Apt.", "Enf.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 109,76", "R$ 109,76", "R$ 109,76", "R$ 109,76", "R$ 109,76", "R$ 109,76"],
+            total: [36621.01, 39550.15, 38450.76, 41529.24, 51008.42, 55321.88],
+            age_data: [
+              { label: "0 a 18",    values: [275.51, 297.56, 289.28, 312.44, 383.76, 416.21] },
+              { label: "19 a 23",   values: [325.10, 351.11, 341.35, 368.68, 452.83, 491.12] },
+              { label: "24 a 28",   values: [393.38, 424.84, 413.03, 446.10, 547.92, 594.26] },
+              { label: "29 a 33",   values: [472.05, 509.81, 495.64, 535.32, 657.51, 713.11] },
+              { label: "34 a 38",   values: [538.14, 581.18, 565.02, 610.26, 749.55, 812.94] },
+              { label: "39 a 43",   values: [554.28, 598.61, 581.97, 628.57, 772.04, 837.33] },
+              { label: "44 a 48",   values: [674.87, 728.85, 708.59, 765.32, 940.01, 1019.49] },
+              { label: "49 a 53",   values: [793.78, 857.27, 833.44, 900.17, 1105.64, 1199.13] },
+              { label: "54 a 58",   values: [944.59, 1020.15, 991.80, 1071.20, 1315.71, 1426.96] },
+              { label: "59 ou mais",values: [1652.94, 1785.16, 1735.55, 1874.48, 2302.36, 2497.04] },
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "Seguros Unimed",
+    color: "#16a085",
+    domain: "unimed.coop.br",
+    resumo: "Integra o maior sistema cooperativista de saúde do mundo, oferecendo abrangência nacional e atendimento focado na relação médico-paciente.",
+    diferenciais: [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Sem limite de idade para titulares. Análise de redução de carências até 63 anos"
+    ],
+    sections: [
+      {
+        name: "SEM COPARTICIPAÇÃO",
+        tables: [
+          {
+            plans: ["Compacto Enf.", "Efetivo Apt.", "Completo Apt.", "Superior Apt.", "Superior Plus Apt.", "Sênior Apt."],
+            acomodacao: ["Enf.", "Apt.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            reembolso: ["R$ 81,90", "R$ 81,90", "R$ 105,00", "R$ 210,00", "R$ 210,00", "R$ 560,00"],
+            total: [46855.49, 51712.34, 61221.25, 67739.79, 75195.55, 168433.42],
+            age_data: [
+              { label: "0 a 18",    values: [350.30, 386.61, 457.70, 506.44, 562.18, 1259.25] },
+              { label: "19 a 23",   values: [428.77, 473.21, 560.23, 619.88, 688.11, 1541.32] },
+              { label: "24 a 28",   values: [536.87, 592.52, 701.48, 776.17, 861.59, 1929.92] },
+              { label: "29 a 33",   values: [593.27, 654.77, 775.17, 857.70, 952.11, 2132.66] },
+              { label: "34 a 38",   values: [631.91, 697.41, 825.65, 913.56, 1014.11, 2271.55] },
+              { label: "39 a 43",   values: [733.01, 808.99, 957.74, 1059.72, 1176.36, 2634.97] },
+              { label: "44 a 48",   values: [876.25, 967.07, 1144.90, 1266.81, 1406.23, 3149.88] },
+              { label: "49 a 53",   values: [1050.91, 1159.84, 1373.11, 1519.32, 1686.54, 3777.74] },
+              { label: "54 a 58",   values: [1247.67, 1377.00, 1630.20, 1803.78, 2002.31, 4485.05] },
+              { label: "59 ou mais",values: [2101.81, 2319.68, 2746.22, 3038.63, 3373.07, 7555.47] },
+            ]
+          }
+        ]
+      },
+      {
+        name: "COPARTICIPAÇÃO DE 30%",
+        tables: [
+          {
+            plans: ["Compacto Enf.", "Efetivo Apt.", "Completo Apt.", "Superior Apt.", "Superior Plus Apt.", "Sênior Apt."],
+            acomodacao: ["Enf.", "Apt.", "Apt.", "Apt.", "Apt.", "Apt."],
+            abrangencia: ["Nacional","Nacional","Nacional","Nacional","Nacional","Nacional"],
+            total: [33042.82, 36467.67, 43315.57, 51872.37, 57080.81, 146450.13],
+            age_data: [
+              { label: "0 a 18",    values: [247.03, 272.64, 323.84, 387.81, 426.75, 1094.89] },
+              { label: "19 a 23",   values: [302.37, 333.71, 396.38, 474.68, 522.34, 1340.15] },
+              { label: "24 a 28",   values: [378.61, 417.85, 496.31, 594.36, 654.04, 1678.03] },
+              { label: "29 a 33",   values: [418.38, 461.74, 548.45, 656.79, 722.74, 1854.31] },
+              { label: "34 a 38",   values: [445.63, 491.82, 584.17, 699.57, 769.81, 1975.08] },
+              { label: "39 a 43",   values: [516.92, 570.50, 677.63, 811.49, 892.97, 2291.07] },
+              { label: "44 a 48",   values: [617.93, 681.98, 810.04, 970.07, 1067.47, 2738.77] },
+              { label: "49 a 53",   values: [741.10, 817.92, 971.51, 1163.43, 1280.25, 3284.68] },
+              { label: "54 a 58",   values: [879.86, 971.07, 1153.41, 1381.26, 1519.95, 3899.68] },
+              { label: "59 ou mais",values: [1482.21, 1635.85, 1943.02, 2326.86, 2560.50, 6569.36] },
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];
+
+const companyLogos = {
+  "Amil Bronze": "https://marcas-logos.net/wp-content/uploads/2020/01/Amil-Logo-1.png",
+  "Linha Amil": "https://marcas-logos.net/wp-content/uploads/2020/01/Amil-Logo-1.png",
+  "Amil Selecionada": "https://marcas-logos.net/wp-content/uploads/2020/01/Amil-Logo-1.png",
+  "HapVida Smart": "https://marcas-logos.net/wp-content/uploads/2020/01/hapvida-logo.png",
+  "HapVida Advance": "https://marcas-logos.net/wp-content/uploads/2020/01/hapvida-logo.png",
+  "Linha Porto Saúde": "https://marcas-logos.net/wp-content/uploads/2020/01/Porto-Seguro-Logo-1.png",
+  "Porto Seguro": "https://marcas-logos.net/wp-content/uploads/2020/01/Porto-Seguro-Logo-1.png",
+  "SulAmérica": "https://marcas-logos.net/wp-content/uploads/2020/01/SulAmerica-Logo.png",
+  "Bradesco": "https://marcas-logos.net/wp-content/uploads/2020/01/bradesco-logo.png",
+  "Seguros Unimed": "https://marcas-logos.net/wp-content/uploads/2020/01/Unimed-Logo.png"
+};
+
+COMPANIES.forEach(c => {
+  if (companyLogos[c.company]) {
+    c.logo = companyLogos[c.company];
+  }
+});
+
+// ───────────────────────────────────────────────
+//  STATE
+// ───────────────────────────────────────────────
+let activeCompany = null;
+let activeSection = 'all'; // 'all' | section index
+let compareList = [];
+let currentView = 'main';
+
+function isComparing(cIdx, sIdx, tIdx, pIdx) {
+  return compareList.some(item => item.cIdx === cIdx && item.sIdx === sIdx && item.tIdx === tIdx && item.pIdx === pIdx);
+}
+
+function toggleCompare(cIdx, sIdx, tIdx, pIdx) {
+  const index = compareList.findIndex(item => item.cIdx === cIdx && item.sIdx === sIdx && item.tIdx === tIdx && item.pIdx === pIdx);
+  if (index > -1) {
+    compareList.splice(index, 1);
+  } else {
+    compareList.push({ cIdx, sIdx, tIdx, pIdx });
+  }
+  
+  if (currentView === 'compare') {
+    if (compareList.length === 0) toggleCompareView();
+    else renderCompareView();
+  } else {
+    renderMain();
+  }
+  renderCompareBar();
+}
+
+function clearCompare() {
+  compareList = [];
+  if (currentView === 'compare') toggleCompareView();
+  renderMain();
+  renderCompareBar();
+}
+
+function renderCompareBar() {
+  const bar = document.getElementById('compare-bar');
+  const count = document.getElementById('compare-count');
+  count.innerText = compareList.length;
+  if (compareList.length > 0) {
+    bar.classList.add('show');
+    document.body.classList.add('has-compare');
+  } else {
+    bar.classList.remove('show');
+    document.body.classList.remove('has-compare');
+  }
+}
+
+function toggleCompareView() {
+  const main = document.getElementById('main-layout');
+  const compare = document.getElementById('compare-view');
+  const btn = document.getElementById('btn-compare-action');
+  
+  if (currentView === 'main') {
+    if (compareList.length === 0) return;
+    currentView = 'compare';
+    main.style.display = 'none';
+    compare.style.display = 'block';
+    btn.innerText = 'Voltar';
+    renderCompareView();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    currentView = 'main';
+    main.style.display = 'grid';
+    compare.style.display = 'none';
+    btn.innerText = 'Ver Comparação';
+    renderMain();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function renderCompareView() {
+  const cv = document.getElementById('compare-view');
+  if (compareList.length === 0) return;
+
+  // Find lowest total
+  const totals = compareList.map(item => COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx].total ? COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx].total[item.pIdx] : Infinity);
+  const minTotal = Math.min(...totals.filter(t => typeof t === 'number'));
+
+  let html = `
+    <div style="width:100%">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px">
+        <h2>Comparativo de Planos</h2>
+        <button class="btn-compare-action secondary" onclick="toggleCompareView()">Voltar para Operadoras</button>
+      </div>
+      <div class="compare-table-wrap fade-in">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Atributos</th>
+  `;
+
+  compareList.forEach((item, i) => {
+    const c = COMPANIES[item.cIdx];
+    const s = c.sections[item.sIdx];
+    const t = s.tables[item.tIdx];
+    const pName = t.plans[item.pIdx];
+    
+    html += `
+      <th>
+        <div class="comp-plan-header">
+          ${c.logo ? `<img src="${c.logo}" alt="${c.company}" referrerpolicy="no-referrer">` : `<div style="font-size:24px">${c.icon||'🏥'}</div>`}
+          <h3>${pName}</h3>
+          <div class="comp-op">${c.company}</div>
+          <button class="remove-compare-btn" style="margin-top:4px" onclick="toggleCompare(${item.cIdx}, ${item.sIdx}, ${item.tIdx}, ${item.pIdx})">Remover</button>
+        </div>
+      </th>
+    `;
+  });
+
+  html += `</tr></thead><tbody>`;
+
+  // Total
+  html += `<tr><td>Total (66 Vidas/mês)</td>`;
+  compareList.forEach(item => {
+    const t = COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx];
+    const val = t.total ? t.total[item.pIdx] : '-';
+    const isBest = val === minTotal;
+    html += `<td><div class="val-total ${isBest ? 'best-total' : ''}">${val !== '-' ? fmt(val) : '-'}</div>${isBest ? '<div class="best-badge" style="margin-top:4px">★ Menor Preço</div>' : ''}</td>`;
+  });
+  html += `</tr>`;
+
+  // Modalidade
+  html += `<tr><td>Modalidade</td>`;
+  compareList.forEach(item => {
+    html += `<td><span style="font-size:11px; font-weight:600; color:var(--text-main); background:rgba(255,255,255,0.1); padding:4px 8px; border-radius:4px;">${sectionLabel(COMPANIES[item.cIdx].sections[item.sIdx].name)}</span></td>`;
+  });
+  html += `</tr>`;
+
+  // Acomodação
+  html += `<tr><td>Acomodação</td>`;
+  compareList.forEach(item => {
+    const acom = COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx].acomodacao?.[item.pIdx] || '-';
+    const isApt = acom.toLowerCase().includes('apt');
+    html += `<td><span class="${isApt ? 'tag-apt' : 'tag-enf'}" style="font-size:10px; padding:3px 8px">${isApt ? 'APARTAMENTO' : 'ENFERMARIA'}</span></td>`;
+  });
+  html += `</tr>`;
+
+  // Abrangência
+  html += `<tr><td>Abrangência</td>`;
+  compareList.forEach(item => html += `<td>${COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx].abrangencia?.[item.pIdx] || '-'}</td>`);
+  html += `</tr>`;
+
+  // Reembolso
+  html += `<tr><td>Reembolso (Consulta)</td>`;
+  compareList.forEach(item => html += `<td>${COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx].reembolso?.[item.pIdx] || '-'}</td>`);
+  html += `</tr>`;
+
+  // Redes
+  html += `<tr><td>Redes Credenciadas</td>`;
+  compareList.forEach(item => {
+    const c = COMPANIES[item.cIdx];
+    if (c.redes) {
+      html += `<td><div style="display:flex; flex-direction:column; gap:6px;">${c.redes.map(r => `<button class="btn-outline" style="border-color:var(--accent); color:var(--accent); font-size:11px; padding:4px" onclick="window.open('${r.file}', '_blank')">🏥 ${r.label}</button>`).join('')}</div></td>`;
+    } else {
+      html += `<td>-</td>`;
+    }
+  });
+  html += `</tr>`;
+
+  // Age Ranges
+  html += `<tr><td colspan="${compareList.length + 1}" class="compare-section-title">Preços por Faixa Etária</td></tr>`;
+  
+  const ageLabels = ["0 a 18", "19 a 23", "24 a 28", "29 a 33", "34 a 38", "39 a 43", "44 a 48", "49 a 53", "54 a 58", "59 ou mais"];
+  
+  ageLabels.forEach((label) => {
+    html += `<tr><td>${label}</td>`;
+    const vals = compareList.map(item => {
+      const ad = COMPANIES[item.cIdx].sections[item.sIdx].tables[item.tIdx].age_data;
+      const row = ad.find(r => r.label === label);
+      return row ? row.values[item.pIdx] : Infinity;
+    });
+    const minAge = Math.min(...vals.filter(v => typeof v === 'number'));
+
+    compareList.forEach((item, i) => {
+      const v = vals[i];
+      const isBest = v === minAge;
+      html += `<td style="color:var(--text-main); font-weight:${isBest ? '700':'400'}; ${isBest ? 'color:var(--accent3)' : ''}">${v !== Infinity ? fmt(v) : '-'}</td>`;
+    });
+    html += `</tr>`;
+  });
+
+  // Diferenciais
+  html += `<tr><td colspan="${compareList.length + 1}" class="compare-section-title">Diferenciais e Regras</td></tr>`;
+  html += `<tr><td>Detalhes</td>`;
+  compareList.forEach(item => {
+    const c = COMPANIES[item.cIdx];
+    if (c.diferenciais) {
+      html += `<td><ul class="diferenciais-list" style="padding-left:0; gap:6px; font-size:12px;">
+        ${c.diferenciais.map(d => `<li>${d}</li>`).join('')}
+      </ul></td>`;
+    } else {
+      html += `<td>-</td>`;
+    }
+  });
+  html += `</tr>`;
+
+  html += `
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+  cv.innerHTML = html;
+}
+
+// ───────────────────────────────────────────────
+//  HELPERS
+// ───────────────────────────────────────────────
+function fmt(v) {
+  if (typeof v === 'number') {
+    return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  return v;
+}
+
+function sectionIcon(name) {
+  const n = name.toUpperCase();
+  if (n.includes('SEM COPAR')) return { cls: 'icon-sem', emoji: '✅' };
+  if (n.includes('PARCIAL'))   return { cls: 'icon-par', emoji: '⚡' };
+  if (n.includes('30%') || n.includes('TOTAL')) return { cls: 'icon-cop', emoji: '💰' };
+  return { cls: 'icon-par', emoji: '📋' };
+}
+
+function sectionLabel(name) {
+  const n = name.toUpperCase();
+  if (n.includes('SEM COPAR')) return 'Sem Coparticipação';
+  if (n.includes('PARCIAL'))   return 'Coparticipação Parcial';
+  if (n.includes('30%'))       return 'Coparticipação 30%';
+  if (n.includes('TOTAL'))     return 'Coparticipação Total 30%';
+  if (n.includes('LINHA'))     return name;
+  return name;
+}
+
+function planCountForCompany(c) {
+  let count = 0;
+  c.sections.forEach(s => s.tables.forEach(t => { count += t.plans.length; }));
+  return count;
+}
+
+// ───────────────────────────────────────────────
+//  RENDER SIDEBAR
+// ───────────────────────────────────────────────
+function renderSidebar() {
+  const sb = document.getElementById('sidebar');
+  sb.innerHTML = '<div class="sidebar-label">Operadoras</div>';
+  COMPANIES.forEach((c, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'company-btn' + (activeCompany === i ? ' active' : '');
+    btn.id = `company-btn-${i}`;
+    btn.innerHTML = `
+      <span style="font-size:16px">${c.logo ? `<img src="${c.logo}" class="company-logo" referrerpolicy="no-referrer">` : (c.icon || '🏥')}</span>
+      <span>${c.company}</span>
+      <span class="company-count">${c.sections.length} seções</span>
+    `;
+    btn.addEventListener('click', () => selectCompany(i));
+    sb.appendChild(btn);
+  });
+}
+
+// ───────────────────────────────────────────────
+//  RENDER MAIN
+// ───────────────────────────────────────────────
+function selectCompany(idx) {
+  activeCompany = idx;
+  renderSidebar();
+  renderMain();
+}
+
+function renderMain() {
+  const main = document.getElementById('main-content');
+  if (activeCompany === null) {
+    main.innerHTML = '<div class="empty-state"><div class="big-icon">🏥</div><p>Selecione uma operadora no painel ao lado.</p></div>';
+    return;
+  }
+  const c = COMPANIES[activeCompany];
+  
+  // Collect all totals across all sections/tables for min highlighting
+  const allTotals = [];
+  c.sections.forEach(s => s.tables.forEach(t => {
+    if (t.total) t.total.forEach(v => { if (typeof v === 'number') allTotals.push(v); });
+  }));
+  const globalMin = Math.min(...allTotals);
+
+  // Build HTML
+  let html = '';
+
+  // Company header
+  const planCount = c.sections.reduce((acc, s) => acc + s.tables.reduce((a2, t) => a2 + t.plans.length, 0), 0);
+  const sectionCount = c.sections.length;
+  const minTotal = globalMin;
+
+  html += `
+  <div class="company-header fade-in">
+    ${c.logo ? `<img src="${c.logo}" class="company-logo-large" alt="${c.company}" referrerpolicy="no-referrer">` : `<div class="company-logo-circle" style="background:linear-gradient(135deg,${c.color}cc,${c.color}88)">${c.icon || '🏥'}</div>`}
+    <div class="company-info">
+      <h2>${c.company}</h2>
+      <p>${sectionCount} modalidade${sectionCount > 1 ? 's' : ''} · ${planCount} planos disponíveis · 66 vidas · Nacional</p>
+    </div>
+    <div class="company-stats">
+      ${c.redes ? `
+        <div style="display:flex; gap:8px; margin-right:12px; align-items:center;">
+          ${c.redes.map(r => `<button class="btn-outline" onclick="window.open('${r.file}', '_blank')">🏥 Ver ${r.label}</button>`).join('')}
+        </div>
+      ` : ''}
+      <div class="stat-box">
+        <div class="sv">${sectionCount}</div>
+        <div class="sl">Modalidades</div>
+      </div>
+      <div class="stat-box">
+        <div class="sv">${planCount}</div>
+        <div class="sl">Planos</div>
+      </div>
+      <div class="stat-box">
+        <div class="sv" style="font-size:14px">${fmt(minTotal)}</div>
+        <div class="sl">Menor total/mês</div>
+      </div>
+    </div>
+  </div>`;
+
+  // Summary cards for all plans
+  html += `<div class="fade-in-delay">`;
+  c.sections.forEach((section, si) => {
+    const { cls, emoji } = sectionIcon(section.name);
+    let cardCls = '';
+    if (cls === 'icon-sem') cardCls = 'sem-copar';
+    else if (cls === 'icon-par') cardCls = 'copar-parcial';
+    else if (cls === 'icon-cop') cardCls = 'copar-30';
+
+    section.tables.forEach((table, ti) => {
+      html += `
+      <div class="section-card ${cardCls}">
+        <div class="section-header">
+          <div class="section-icon ${cls}">${emoji}</div>
+          <div>
+            <div class="section-title">${sectionLabel(section.name)}</div>
+            <div class="section-subtitle">${table.plans.length} plano${table.plans.length > 1 ? 's' : ''} nesta modalidade</div>
+          </div>
+        </div>`;
+      
+      // Summary cards
+      if (table.total) {
+        const tMin = Math.min(...table.total.filter(v => typeof v === 'number'));
+        html += `<div class="summary-grid" style="padding:16px 20px">`;
+        table.plans.forEach((plan, pi) => {
+          const tot = table.total[pi];
+          const isMin = typeof tot === 'number' && tot === tMin;
+          const acom = table.acomodacao ? table.acomodacao[pi] : '';
+          const isApt = acom && acom.toLowerCase().includes('apt');
+          html += `
+          <div class="summary-card ${isMin ? 'best-value' : ''}">
+            ${isMin ? '<div class="best-badge">★ Menor preço</div>' : ''}
+            <div class="plan-name" title="${plan}">${plan}</div>
+            <div class="acomodacao-tag">
+              ${acom ? `<span class="${isApt ? 'tag-apt' : 'tag-enf'}">${isApt ? 'APART.' : 'ENFER.'}</span>` : ''}
+            </div>
+            <div class="total-value">${fmt(tot)}</div>
+            <div class="total-label">total 66 vidas/mês</div>
+            <button class="compare-toggle-btn ${isComparing(activeCompany, si, ti, pi) ? 'active' : ''}" onclick="toggleCompare(${activeCompany}, ${si}, ${ti}, ${pi})">
+              ${isComparing(activeCompany, si, ti, pi) ? '✓ Comparando' : '➕ Comparar'}
+            </button>
+          </div>`;
+        });
+        html += `</div>`;
+      }
+
+      // Age table
+      html += `<details class="age-drawer">
+        <summary>Visualizar tabela completa de preços por faixa etária</summary>
+        <div class="table-wrap"><table>
+        <thead><tr>
+          <th>Faixa Etária</th>`;
+      table.plans.forEach((plan, pi) => {
+        const acom = table.acomodacao ? table.acomodacao[pi] : '';
+        const isApt = acom && acom.toLowerCase().includes('apt');
+        html += `<th class="th-plan ${isApt ? 'th-apt' : 'th-enf'}" title="${plan}">${plan}</th>`;
+      });
+      html += `</tr></thead><tbody>`;
+      
+      // Find min value per age row for highlighting
+      table.age_data.forEach(row => {
+        const numVals = row.values.filter(v => typeof v === 'number');
+        const rowMin = numVals.length ? Math.min(...numVals) : Infinity;
+        html += `<tr>
+          <td>${row.label}</td>`;
+        row.values.forEach(v => {
+          const isBest = typeof v === 'number' && v === rowMin && numVals.length > 1;
+          html += `<td class="${isBest ? 'cell-best' : 'cell-value'}">${fmt(v)}</td>`;
+        });
+        html += `</tr>`;
+      });
+
+      // Total row
+      if (table.total) {
+        html += `<tr class="total-row"><td>Total 66 Vidas/mês</td>`;
+        table.total.forEach(v => {
+          html += `<td>${fmt(v)}</td>`;
+        });
+        html += `</tr>`;
+      }
+
+      html += `</tbody></table></div></details>`;
+      html += `</div>`;
+    });
+  });
+  
+  // Add diferenciais section
+  if (c.diferenciais && c.diferenciais.length > 0) {
+    html += `
+      <div class="diferenciais-box fade-in-delay2">
+        <div class="diferenciais-title">
+          <span style="font-size:18px">💡</span> Informações e Diferenciais
+        </div>
+        <ul class="diferenciais-list">
+          ${c.diferenciais.map(d => `<li>${d}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
+
+  html += `</div>`;
+
+  main.innerHTML = html;
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ───────────────────────────────────────────────
+//  INIT
+// ───────────────────────────────────────────────
+renderSidebar();
+// Auto-select first company
+selectCompany(0);
+</script>
+</body>
+</html>
