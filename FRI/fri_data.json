@@ -1,0 +1,2516 @@
+{
+  "case": "FRI",
+  "empresa_name": "FRI Comercio de Cosmeticos e Perfumaria",
+  "competencia": "Junho/2026",
+  "seguradora_atual": "Porto Saude S.A.",
+  "fatura_total_atual": 58934.880000000005,
+  "total_vidas_atual": 85,
+  "rla_empresa": {
+    "source_file": "RLA_22_06_2026.pdf",
+    "entity_name": "FRI COMERCIO DE COSMETICOS E PERFUMARIA",
+    "subestipulante": "FRI COMERCIO DE COSMETICOS E",
+    "competencia": "Junho/2026",
+    "invoice_total": 56224.94,
+    "premio_real": 52928.13,
+    "iof": 1301.19,
+    "titulares": 57,
+    "dependentes": 27,
+    "total_vidas": 84,
+    "persons": [
+      {
+        "name": "ALAN CABRAL",
+        "carteirinha": "4974389300008433",
+        "cpf": "49743893000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "27/09/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "ALEXANDRE GONCALVES",
+        "carteirinha": "4943066000000135",
+        "cpf": "49430660000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": 984.27,
+        "premio": 961.46
+      },
+      {
+        "name": "SANTOS DINI AYESKA SANTANA DO",
+        "carteirinha": "4987520200008637",
+        "cpf": "49875202000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "26/10/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 655.19,
+        "premio": 640.03
+      },
+      {
+        "name": "ROSARIO EMANUELLA SANTANA DO",
+        "carteirinha": "4987520200008813",
+        "cpf": "49875202000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "26/10/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "ROSARIO LAVINIA SANTANA DO",
+        "carteirinha": "498752020000872",
+        "cpf": "49875202000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "26/10/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "ROSARIO CARLA REGINA",
+        "carteirinha": "4940673300000151",
+        "cpf": "49406733000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/07/2025",
+        "plano_raw": "7029OURO MAIS Q - PME + REDE TERCEIRIZADA /",
+        "plano": "OURO MAIS Q - PME + REDE TERCEIRIZADA",
+        "valor": 1936.4,
+        "premio": 1891.46
+      },
+      {
+        "name": "CRISTIANE APARECIDA",
+        "carteirinha": "4931346600006328",
+        "cpf": "49313466000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 527.6,
+        "premio": 515.41
+      },
+      {
+        "name": "DOS SANTOS SILVA DANIELA CAMILA",
+        "carteirinha": "5058011000010043",
+        "cpf": "50580110000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "10/05/2026",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 1680.49,
+        "premio": 781.7
+      },
+      {
+        "name": "SOFIA FAGUNDES",
+        "carteirinha": "5058011000010110",
+        "cpf": "50580110000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "10/05/2026",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 808.59,
+        "premio": 376.16
+      },
+      {
+        "name": "ARAGAO SILVA DAYANE DA SILVA",
+        "carteirinha": "4850157700000229",
+        "cpf": "48501577000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "MONTEIRO MELISSA LIMA DA",
+        "carteirinha": "485015770000243",
+        "cpf": "48501577000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 385.04,
+        "premio": 376.16
+      },
+      {
+        "name": "SILVA MONTEIRO DEBORA CORDEIRO",
+        "carteirinha": "4850157900000329",
+        "cpf": "48501579000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "DENIS ADAN",
+        "carteirinha": "4881485300004538",
+        "cpf": "48814853000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "12/11/2024",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": null,
+        "premio": null
+      },
+      {
+        "name": "KELLYANE MOREIRA",
+        "carteirinha": "4881485300009228",
+        "cpf": "48814853000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "18/01/2026",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": null,
+        "premio": null
+      },
+      {
+        "name": "MAITE SANTOS DE",
+        "carteirinha": "488148530000553",
+        "cpf": "48814853000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "25/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": null,
+        "premio": null
+      },
+      {
+        "name": "MARIA CLARA",
+        "carteirinha": "488148530000542",
+        "cpf": "48814853000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "25/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": null,
+        "premio": null
+      },
+      {
+        "name": "EDGAR FREDERICO",
+        "carteirinha": "4857812400003542",
+        "cpf": "48578124000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 1001.22,
+        "premio": 978.02
+      },
+      {
+        "name": "SILVA FERREIRA EDILSON ALVES DOS",
+        "carteirinha": "4931336700006224",
+        "cpf": "49313367000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "16/05/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "SANTOS JUNIOR EDNA MARIA",
+        "carteirinha": "4945186800007641",
+        "cpf": "49451868000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/07/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 666.48,
+        "premio": 651.06
+      },
+      {
+        "name": "PEREIRA EDUARDO AGUIAR DE",
+        "carteirinha": "4885986200004628",
+        "cpf": "48859862000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "30/11/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 527.6,
+        "premio": 515.41
+      },
+      {
+        "name": "ANDRADE EDUARDO DOS SANTOS",
+        "carteirinha": "4850160700001330",
+        "cpf": "48501607000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "OLIVEIRA ERIKA RODRIGUES",
+        "carteirinha": "4931351600006646",
+        "cpf": "49313516000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 1166.29,
+        "premio": 1139.25
+      },
+      {
+        "name": "VALENTINA RODRIGUES",
+        "carteirinha": "4931351600007510",
+        "cpf": "49313516000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "24/06/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 481.76,
+        "premio": 470.63
+      },
+      {
+        "name": "LINO SILVA EUNICE APARECIDA",
+        "carteirinha": "4931347100006450",
+        "cpf": "49313471000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 900.25,
+        "premio": 879.39
+      },
+      {
+        "name": "SILVA SANTOS GABRIELLA SILVA",
+        "carteirinha": "493134710000658",
+        "cpf": "49313471000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "SANTOS FABIO AUGUSTO",
+        "carteirinha": "4850158100000441",
+        "cpf": "48501581000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "7430OURO MAX Q PME + REDE",
+        "plano": "OURO MAX Q PME + REDE",
+        "valor": 1584.17,
+        "premio": 1547.41
+      },
+      {
+        "name": "ASPERTI OTTAIANO FELIPE BATISTA DO",
+        "carteirinha": "4931359700006735",
+        "cpf": "49313597000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 655.19,
+        "premio": 640.03
+      },
+      {
+        "name": "NASCIMENTO MIGUEL BATISTA DA",
+        "carteirinha": "493135970000682",
+        "cpf": "49313597000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "SILVA GABRIEL DIAS DE",
+        "carteirinha": "4916587900006129",
+        "cpf": "49165879000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "27/03/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "SOBRAL GABRIELA PERES",
+        "carteirinha": "4850158600000628",
+        "cpf": "48501586000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "ROCHA GENUINA DE CARVALHO",
+        "carteirinha": "4899432700005644",
+        "cpf": "48994327000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "23/01/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 932.16,
+        "premio": 910.56
+      },
+      {
+        "name": "PAIVA LEONARDO PAIVA",
+        "carteirinha": "4899432700009624",
+        "cpf": "48994327000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "27/03/2026",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "RIBEIRO RAFAEL PAIVA",
+        "carteirinha": "4899432700005711",
+        "cpf": "48994327000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "30/01/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 385.04,
+        "premio": 376.16
+      },
+      {
+        "name": "RIBEIRO GIOVANNA CATARINO",
+        "carteirinha": "4987070500008526",
+        "cpf": "49870705000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "25/10/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "DE SOUZA GUSTAVO HENRIQUE",
+        "carteirinha": "4877861700004224",
+        "cpf": "48778617000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "24/10/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": null,
+        "premio": null
+      },
+      {
+        "name": "ACIEM HERGULE FRANKLIN DE",
+        "carteirinha": "4850158300000542",
+        "cpf": "48501583000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 800.23,
+        "premio": 781.7
+      },
+      {
+        "name": "JESUS RIBEIRO HIGOR VICTOR",
+        "carteirinha": "4973122600008229",
+        "cpf": "49731226000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "25/09/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "COELHO NOGUEIRA INACIA REJANE DE",
+        "carteirinha": "4850159100000742",
+        "cpf": "48501591000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 666.48,
+        "premio": 651.06
+      },
+      {
+        "name": "ANDRADE SILVA GEOVANNA VITORIA DE",
+        "carteirinha": "4850159100002515",
+        "cpf": "48501591000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "ANDRADE SILVA ISAIAS SILVA CORDEIRO",
+        "carteirinha": "4850160100001028",
+        "cpf": "48501601000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 527.6,
+        "premio": 515.41
+      },
+      {
+        "name": "DAS NEVES HENRY GONCALVES",
+        "carteirinha": "485016010000903",
+        "cpf": "48501601000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "17/12/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "DA SILVA ISAQUE CABRAL",
+        "carteirinha": "4850161500001630",
+        "cpf": "48501615000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "JANAINA DOS SANTOS",
+        "carteirinha": "4931360200006924",
+        "cpf": "49313602000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "LIMA DA SILVA JONATHAS",
+        "carteirinha": "4931361000007033",
+        "cpf": "49313610000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "FARIA ENZO GABRIEL",
+        "carteirinha": "493136100000715",
+        "cpf": "49313610000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "NOVAIS FARIA JULY ANNA ALMEIDA",
+        "carteirinha": "4973939400008326",
+        "cpf": "49739394000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "26/09/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "SOUZA KAROLINE MARTINS",
+        "carteirinha": "4850162800002234",
+        "cpf": "48501628000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 984.27,
+        "premio": 961.46
+      },
+      {
+        "name": "AMARAL KAUAN HENRIQUE",
+        "carteirinha": "4857618000002925",
+        "cpf": "48576180000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 527.6,
+        "premio": 515.41
+      },
+      {
+        "name": "TEXEIRA DA SILVA KAUANY CATHERINE",
+        "carteirinha": "4876261200004126",
+        "cpf": "48762612000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "22/10/2024",
+        "plano_raw": "7031BRONZE E PME /",
+        "plano": "BRONZE E PME",
+        "valor": 629.6,
+        "premio": 615.03
+      },
+      {
+        "name": "SAMURIO DOS SANTOS KETHELEN MARIA",
+        "carteirinha": "5057249200009928",
+        "cpf": "50572492000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "08/05/2026",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 1372.54,
+        "premio": 618.82
+      },
+      {
+        "name": "MOURA KEVEEN VALFRIDO",
+        "carteirinha": "4850162300002027",
+        "cpf": "48501623000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "DOS SANTOS LARA DE MORAES DA",
+        "carteirinha": "4850159500000927",
+        "cpf": "48501595000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "COSTA LAURA RIBEIRO DE",
+        "carteirinha": "4857677400003126",
+        "cpf": "48576774000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 633.48,
+        "premio": 618.82
+      },
+      {
+        "name": "OLIVEIRA LETICIA DE JESUS",
+        "carteirinha": "5038535100009522",
+        "cpf": "50385351000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "24/03/2026",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 518.01,
+        "premio": 506.04
+      },
+      {
+        "name": "FERNANDES LOIDE LIDIANE MORAES",
+        "carteirinha": "5040885600009745",
+        "cpf": "50408856000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "31/03/2026",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 1166.29,
+        "premio": 1139.25
+      },
+      {
+        "name": "FIGUEIRA VALENTIM LARA FIGUEIRA",
+        "carteirinha": "5040885600009817",
+        "cpf": "50408856000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "31/03/2026",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 481.76,
+        "premio": 470.63
+      },
+      {
+        "name": "VALENTIM LUCAS BEZERRA DA",
+        "carteirinha": "4953150600007734",
+        "cpf": "49531506000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "22/07/2025",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 786.68,
+        "premio": 768.46
+      },
+      {
+        "name": "SILVA MARIA HELENA DO",
+        "carteirinha": "4850160300001156",
+        "cpf": "48501603000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 1106.72,
+        "premio": 1081.06
+      },
+      {
+        "name": "NASCIMENTO MARTINS MARIANA DE OLIVEIRA",
+        "carteirinha": "4931361600007234",
+        "cpf": "49313616000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 984.27,
+        "premio": 961.46
+      },
+      {
+        "name": "XAVIER MAYUMI GOYA",
+        "carteirinha": "4857678500003230",
+        "cpf": "48576785000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "KAKAZU PAULO",
+        "carteirinha": "4850162100001929",
+        "cpf": "48501621000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "",
+        "plano": "",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "PEREIRA DA SILVA PRISCILA DANIELLE DA",
+        "carteirinha": "4895285100005340",
+        "cpf": "48952851000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "09/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 1001.22,
+        "premio": 978.02
+      },
+      {
+        "name": "SILVA RAFAEL CUNHA DA",
+        "carteirinha": "5037065600009430",
+        "cpf": "50370656000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "20/03/2026",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "SILVA RAFAEL MIRANDA DA",
+        "carteirinha": "5014693200009131",
+        "cpf": "50146932000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "16/01/2026",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "SILVA RODRIGO CESAR",
+        "carteirinha": "4869054100003833",
+        "cpf": "48690541000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "23/09/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "PRETE SERGIO DIAS",
+        "carteirinha": "4964503900007948",
+        "cpf": "49645039000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "27/08/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 1166.29,
+        "premio": 1139.25
+      },
+      {
+        "name": "OLMEDO CECILIA DERSCHNER",
+        "carteirinha": "496450390000801",
+        "cpf": "49645039000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "27/08/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 481.76,
+        "premio": 470.63
+      },
+      {
+        "name": "VIDEIRA OLMEDO MARIA ISABEL",
+        "carteirinha": "4964503900008112",
+        "cpf": "49645039000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "27/08/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 481.76,
+        "premio": 470.63
+      },
+      {
+        "name": "SIMONE SABINO",
+        "carteirinha": "4850167000000156",
+        "cpf": "48501670000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": 1662.58,
+        "premio": 1624.0
+      },
+      {
+        "name": "MARINA MANTOVANI",
+        "carteirinha": "4850167000000222",
+        "cpf": "48501670000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE TERCEIRIZADA /",
+        "plano": "PRATA MAIS Q RC - PME + REDE TERCEIRIZADA",
+        "valor": 648.13,
+        "premio": 633.13
+      },
+      {
+        "name": "DE PAULA TAILSON DOS ANJOS",
+        "carteirinha": "4850162500002130",
+        "cpf": "48501625000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 609.96,
+        "premio": 595.85
+      },
+      {
+        "name": "LEAL TALITA CRISTINA",
+        "carteirinha": "4892268300004935",
+        "cpf": "48922683000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "08/01/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 655.19,
+        "premio": 640.03
+      },
+      {
+        "name": "CORDEIRO DE LIMA FERNANDA CORDEIRO",
+        "carteirinha": "4892268300006018",
+        "cpf": "48922683000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "21/03/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "DE LIMA VERIDIANE DE CASTRO",
+        "carteirinha": "4931363400007345",
+        "cpf": "49313634000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 776.37,
+        "premio": 758.39
+      },
+      {
+        "name": "LIMA RAFAELA CASTRO",
+        "carteirinha": "4931363400007413",
+        "cpf": "49313634000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/06/2025",
+        "plano_raw": "8767PRATA PRO E",
+        "plano": "PRATA PRO E",
+        "valor": 320.67,
+        "premio": 313.29
+      },
+      {
+        "name": "ARAUJO VERONICA PONTES",
+        "carteirinha": "4850161700001734",
+        "cpf": "48501617000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 786.68,
+        "premio": 768.46
+      },
+      {
+        "name": "CANDIDO JORGE TEOTONIO",
+        "carteirinha": "485016170000268",
+        "cpf": "48501617000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 385.04,
+        "premio": 376.16
+      },
+      {
+        "name": "DE SOUSA NETO MANUELA",
+        "carteirinha": "485016170000289",
+        "cpf": "48501617000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "",
+        "plano": "",
+        "valor": 385.04,
+        "premio": 376.16
+      },
+      {
+        "name": "SOUSA MARIA CECILIA",
+        "carteirinha": "4850161700002713",
+        "cpf": "48501617000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "13/08/2024",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 385.04,
+        "premio": 376.16
+      },
+      {
+        "name": "PONTES DE SOUSA WESLEY CORREIA",
+        "carteirinha": "5016348900009333",
+        "cpf": "50163489000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "21/01/2026",
+        "plano_raw": "8439BRONZE BRASIL E /",
+        "plano": "BRONZE",
+        "valor": 732.36,
+        "premio": 715.41
+      },
+      {
+        "name": "FAGUNDES WILLIAM TADEU ARARIPE",
+        "carteirinha": "4890831700004835",
+        "cpf": "48908317000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "03/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 984.27,
+        "premio": 961.46
+      },
+      {
+        "name": "ARAUJO ALENCAR HELENE PEREIRA",
+        "carteirinha": "4890831700005032",
+        "cpf": "48908317000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "08/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 916.31,
+        "premio": 895.08
+      },
+      {
+        "name": "DOS SANTOS ARARIPE LEVI DOS SANTOS",
+        "carteirinha": "489083170000514",
+        "cpf": "48908317000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "08/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 481.76,
+        "premio": 470.63
+      },
+      {
+        "name": "ARARIPE ALENCAR THEO DOS SANTOS",
+        "carteirinha": "489083170000527",
+        "cpf": "48908317000",
+        "titularidade": "Dependente",
+        "inicio_vigencia": "08/01/2025",
+        "plano_raw": "7015PRATA MAIS Q RC - PME + REDE",
+        "plano": "PRATA MAIS Q RC - PME + REDE",
+        "valor": 481.76,
+        "premio": 470.63
+      }
+    ]
+  },
+  "rla_subestipulante": {
+    "source_file": "RLA_22_06_2026 (1).pdf",
+    "entity_name": "0",
+    "subestipulante": "KCB SERVICOS DE APOIO",
+    "competencia": "Junho/2026",
+    "invoice_total": 2709.94,
+    "premio_real": 1321.04,
+    "iof": 62.86,
+    "titulares": 1,
+    "dependentes": 0,
+    "total_vidas": 1,
+    "persons": [
+      {
+        "name": "KARLA",
+        "carteirinha": "5061287600000150",
+        "cpf": "50612876000",
+        "titularidade": "Titular",
+        "inicio_vigencia": "13/05/2026",
+        "plano_raw": "",
+        "plano": "",
+        "valor": 2709.94,
+        "premio": 1321.04
+      }
+    ]
+  },
+  "plans_excel": [
+    {
+      "name": "Amil Bronze",
+      "section": "Coparticipação Parcial",
+      "plans": [
+        "Bronze",
+        "Bronze Mais"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            140.79,
+            170.41
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            191.19,
+            231.42
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            224.44,
+            271.66
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            224.44,
+            271.66
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            224.44,
+            271.66
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            250.7,
+            303.44
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            346.22,
+            419.05
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            413.39,
+            500.35
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            594.45,
+            719.5
+          ]
+        }
+      ],
+      "total": [
+        19186.54,
+        23223.03
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enfermaria",
+            "Enfermaria"
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Regional",
+            "Regional"
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "***",
+            "***"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Aceitação de idade e análise de redução de carências até 69 anos"
+      ]
+    },
+    {
+      "name": "Linha Amil",
+      "section": "Coparticipação Parcial",
+      "plans": [
+        "Amil Prata II",
+        "Amil Prata II.",
+        "Amil Prata",
+        "Amil Prata.",
+        "Amil Ouro",
+        "Amil Ouro.",
+        "Amil Ouro II",
+        "Platinum R1",
+        "Platinum R2"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            235.88,
+            261.83,
+            274.61,
+            304.82,
+            309.37,
+            343.41,
+            380.28,
+            526.3,
+            531.53
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            275.98,
+            306.34,
+            321.29,
+            356.64,
+            361.96,
+            401.79,
+            444.93,
+            615.77,
+            621.89
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            336.7,
+            373.73,
+            391.97,
+            435.1,
+            441.59,
+            490.18,
+            542.81,
+            751.24,
+            758.71
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            404.04,
+            448.48,
+            470.36,
+            522.12,
+            529.91,
+            588.22,
+            651.37,
+            901.49,
+            910.45
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            424.24,
+            470.9,
+            493.88,
+            548.23,
+            556.41,
+            617.63,
+            683.94,
+            946.56,
+            955.97
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            466.66,
+            517.99,
+            543.27,
+            603.05,
+            612.05,
+            679.39,
+            752.33,
+            1041.22,
+            1051.57
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            583.33,
+            647.49,
+            679.09,
+            753.81,
+            765.06,
+            849.24,
+            940.41,
+            1301.53,
+            1314.46
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            641.66,
+            712.24,
+            747.0,
+            829.19,
+            841.57,
+            934.16,
+            1034.45,
+            1431.68,
+            1445.91
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            802.08,
+            890.3,
+            933.75,
+            1036.49,
+            1051.96,
+            1167.7,
+            1293.06,
+            1789.6,
+            1807.39
+          ]
+        }
+      ],
+      "total": [
+        32187.890000000003,
+        35728.31,
+        37471.89,
+        41595.030000000006,
+        42215.719999999994,
+        46860.74,
+        51891.78,
+        71817.64,
+        72531.48000000001
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enfermaria",
+            "Apartamento",
+            "Enfermaria",
+            "Apartamento",
+            "Enfermaria",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento"
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional"
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "**",
+            "**",
+            "**",
+            "**",
+            "96",
+            "96",
+            "80",
+            "240",
+            "328"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Aceitação de idade e análise de redução de carências até 69 anos"
+      ]
+    },
+    {
+      "name": "Amil Selecionada",
+      "section": "Coparticipação Parcial",
+      "plans": [
+        "Amil S380",
+        "Amil S380.",
+        "Amil S450",
+        "Amil S450.",
+        "Amil S750 R1",
+        "Amil S750 R2",
+        "Amil S750 R3"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            289.96,
+            321.87,
+            370.94,
+            411.73,
+            490.01,
+            494.89,
+            534.47
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            339.25,
+            376.59,
+            434.0,
+            481.72,
+            573.31,
+            579.02,
+            625.33
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            413.89,
+            459.44,
+            529.48,
+            587.7,
+            699.44,
+            706.4,
+            762.9
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            496.67,
+            551.33,
+            635.38,
+            705.24,
+            839.33,
+            847.68,
+            915.48
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            521.5,
+            578.9,
+            667.15,
+            740.5,
+            881.3,
+            890.06,
+            961.25
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            573.65,
+            636.79,
+            733.87,
+            814.55,
+            969.43,
+            979.07,
+            1057.38
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            717.06,
+            795.99,
+            917.34,
+            1018.19,
+            1211.79,
+            1223.84,
+            1321.73
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            788.77,
+            875.59,
+            1009.07,
+            1120.01,
+            1332.97,
+            1346.22,
+            1453.9
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            985.96,
+            1094.49,
+            1261.34,
+            1400.01,
+            1666.21,
+            1682.78,
+            1817.38
+          ]
+        }
+      ],
+      "total": [
+        39567.28999999999,
+        43922.07,
+        50617.94,
+        56183.35999999999,
+        66865.79,
+        67530.97999999998,
+        72932.3
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enfermaria",
+            "Apartamento",
+            "Enfermaria",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento"
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional"
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "80",
+            "80",
+            "96",
+            "96",
+            "136",
+            "240",
+            "328"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Aceitação de idade e análise de redução de carências até 69 anos"
+      ]
+    },
+    {
+      "name": "Linha Amil Black",
+      "section": "Coparticipação Parcial",
+      "plans": [
+        "Black R1",
+        "Black R2",
+        "Black R3",
+        "S2500 R1",
+        "S2500 R2"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            738.26,
+            846.37,
+            853.08,
+            772.65,
+            885.81
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            863.76,
+            990.25,
+            998.1,
+            904.0,
+            1036.4
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            1053.79,
+            1208.11,
+            1217.68,
+            1102.88,
+            1264.41
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            1264.55,
+            1449.73,
+            1461.22,
+            1323.46,
+            1517.29
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            1327.78,
+            1522.22,
+            1534.28,
+            1389.63,
+            1593.15
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            1460.56,
+            1674.44,
+            1687.71,
+            1528.59,
+            1752.47
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            1825.7,
+            2093.05,
+            2109.64,
+            1910.74,
+            2190.59
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            2008.27,
+            2302.36,
+            2320.6,
+            2101.81,
+            2409.65
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            2510.34,
+            2877.95,
+            2900.75,
+            2627.26,
+            3012.06
+          ]
+        }
+      ],
+      "total": [
+        100741.19999999998,
+        115493.68999999999,
+        116408.93000000001,
+        105433.93000000001,
+        120875.72999999998
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento"
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional"
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "432",
+            "600",
+            "600",
+            "432",
+            "600"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Aceitação de idade e analise de redução de carencias até 69 anos"
+      ]
+    },
+    {
+      "name": "Bradesco",
+      "section": "Sem Coparticipação",
+      "plans": [
+        "Efetivo",
+        "Efetivo.",
+        "Efetivo Plus",
+        "Efetivo Plus.",
+        "Nacional II",
+        "Nacional III",
+        "Nacional Plus 4",
+        "Premium 6"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            325.99,
+            352.07,
+            342.28,
+            369.68,
+            441.96,
+            479.33,
+            1018.75,
+            1406.94
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            384.67,
+            415.44,
+            403.89,
+            436.23,
+            521.51,
+            565.61,
+            1202.13,
+            1660.18
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            465.45,
+            502.68,
+            488.7,
+            527.83,
+            631.02,
+            684.39,
+            1454.56,
+            2008.8
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            558.54,
+            603.22,
+            586.45,
+            633.4,
+            757.24,
+            821.27,
+            1745.49,
+            2410.58
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            636.73,
+            687.66,
+            668.55,
+            722.07,
+            863.24,
+            936.23,
+            1989.84,
+            2748.03
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            655.84,
+            708.29,
+            688.6,
+            743.73,
+            889.14,
+            964.32,
+            2049.53,
+            2830.48
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            798.52,
+            862.39,
+            838.42,
+            905.54,
+            1082.58,
+            1174.12,
+            2495.43,
+            3446.28
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            939.21,
+            1014.34,
+            986.15,
+            1065.1,
+            1273.33,
+            1381.0,
+            2935.13,
+            4053.52
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            1117.66,
+            1207.06,
+            1173.52,
+            1267.46,
+            1515.26,
+            1643.38,
+            3492.8,
+            4823.68
+          ]
+        }
+      ],
+      "total": [
+        45213.22,
+        48829.83,
+        47472.36,
+        51272.91,
+        61297.29,
+        66480.54,
+        141295.05,
+        195133.62
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enfermaria",
+            "Apartamento",
+            "Enfermaria",
+            "Apartamento",
+            "Enfermaria",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento"
+          ]
+        },
+        {
+          "label": "Abrangencia",
+          "values": [
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional"
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "109.76",
+            "109.76",
+            "109.76",
+            "109.76",
+            "109.76",
+            "109.76",
+            "439.03",
+            "658.55"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores SEM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+        "Sem limite de idade para aceitação. Analise de redução de carências até 67 anos."
+      ]
+    },
+    {
+      "name": "SulAmérica",
+      "section": "Sem Coparticipação",
+      "plans": [
+        "Direto",
+        "Direto.",
+        "Clássico Vital",
+        "Clássico 100",
+        "Especial Vital",
+        "Especial 100 R1",
+        "Especial Mais Vital",
+        "Especial Mais",
+        "Executivo R1",
+        "Prestige"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            284.84,
+            315.94,
+            322.72,
+            358.57,
+            352.7,
+            412.51,
+            481.93,
+            535.47,
+            893.38,
+            1515.07
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            356.05,
+            394.92,
+            403.4,
+            448.21,
+            440.88,
+            515.64,
+            602.41,
+            669.34,
+            1116.72,
+            1893.84
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            441.5,
+            489.7,
+            500.21,
+            555.78,
+            546.68,
+            639.39,
+            746.99,
+            829.98,
+            1384.73,
+            2348.35
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            490.06,
+            543.57,
+            555.23,
+            616.92,
+            606.82,
+            709.73,
+            829.16,
+            921.28,
+            1537.06,
+            2606.67
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            524.37,
+            581.62,
+            594.1,
+            660.1,
+            649.29,
+            759.4,
+            887.19,
+            985.77,
+            1644.64,
+            2789.13
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            608.26,
+            674.68,
+            689.15,
+            765.72,
+            753.18,
+            880.91,
+            1029.14,
+            1143.49,
+            1907.78,
+            3235.39
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            727.12,
+            806.51,
+            823.81,
+            915.34,
+            900.35,
+            1053.04,
+            1230.24,
+            1366.93,
+            2280.57,
+            3867.58
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            852.19,
+            945.23,
+            965.51,
+            1072.78,
+            1055.22,
+            1234.16,
+            1441.84,
+            1602.04,
+            2672.83,
+            4532.82
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            1014.53,
+            1125.3,
+            1149.44,
+            1277.14,
+            1256.23,
+            1469.27,
+            1716.51,
+            1907.23,
+            3182.0,
+            5396.31
+          ]
+        }
+      ],
+      "total": [
+        41292.59,
+        45800.96,
+        46783.53,
+        51981.17,
+        51130.02,
+        59801.13,
+        69864.34,
+        77626.46,
+        129511.45,
+        219636.81
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enfermaria",
+            "Apartamento",
+            "Enfermaria",
+            "Enfermaria",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento"
+          ]
+        },
+        {
+          "label": "Abrangencia",
+          "values": [
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional"
+          ]
+        },
+        {
+          "label": "Reembolso consulta PS",
+          "values": [
+            "90",
+            "90",
+            "110.25",
+            "110.25",
+            "150.3",
+            "180",
+            "330.75",
+            "330.75",
+            "500.4",
+            "1000.35"
+          ]
+        },
+        {
+          "label": "Reembolso consulta eletiva",
+          "values": [
+            "**",
+            "**",
+            "110.25",
+            "110.25",
+            "150.3",
+            "180",
+            "330.75",
+            "330.75",
+            "500.4",
+            "1000.35"
+          ]
+        }
+      ],
+      "notes": [
+        "Reembolsos:",
+        "Plano Direto: Reembolso apenas para consultas em pronto socorro (urgência e emergência).",
+        "Plano Clássico e Especial Vital:  consultas em pronto socorro e consultas eletivas  somente.",
+        "Plano Especial 100 - R1 , Executivo R1, -R2 - R3 e Prestige : Reembolso apenas em consultas de urgência e emergência , consultas eletivas e honorários médicos (internado).",
+        "Rede Credenciada:",
+        "Plano da Linha Vital: Não possui atendimento nos Hospitauis da Rede América e Rede Dasa (São eles: Leforte, São Cristóvão da Gama, Nove de Julho, Santa Paula, Samartitano e Alvorada)",
+        "Plano Especial Mais: Possui atendimento no Hospital Vila Nova Star e Laboratório Alta.",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 24 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Sem limite de idade de titulares. Análise para redução de carencias até 67 anos"
+      ]
+    },
+    {
+      "name": "HapVida-Smart",
+      "section": "Coparticipação Parcial",
+      "plans": [
+        "Smart 200 Up",
+        "Smart 300",
+        "Smart 500",
+        "Smart 500."
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            120.82,
+            174.78,
+            188.68,
+            205.23
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            163.08,
+            235.92,
+            254.68,
+            277.02
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            192.73,
+            278.81,
+            300.98,
+            327.38
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            192.73,
+            291.3,
+            314.47,
+            342.04
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            192.73,
+            301.03,
+            324.98,
+            353.46
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            228.89,
+            331.13,
+            357.48,
+            388.81
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            297.56,
+            430.48,
+            464.72,
+            505.45
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            386.83,
+            559.63,
+            604.13,
+            657.09
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            502.89,
+            727.52,
+            785.37,
+            854.22
+          ]
+        }
+      ],
+      "total": [
+        16648.71,
+        24519.38,
+        26469.56,
+        28790.32
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enf.",
+            "Apto.",
+            "Enf.",
+            "Apto."
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Reg.",
+            "Reg.",
+            "Reg.",
+            "Reg."
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "**",
+            "**",
+            "**",
+            "**"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ou Livre Adesão",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "aceitação de titulares até 74 anos, análise de redução de carências até 64 anos",
+        "HAPVIDA REDE: https://www.hapvida.com.br/site/rede-exclusiva"
+      ]
+    },
+    {
+      "name": "HapVida- Advance",
+      "section": "Coparticipação Parcial",
+      "plans": [
+        "Advance 600",
+        "Advance 600.",
+        "Advance 700",
+        "Advance 700.",
+        "Premium 900.1 Care",
+        "Premium"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            236.75,
+            262.79,
+            312.71,
+            347.13,
+            502.89,
+            529.8
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            277.0,
+            307.46,
+            365.87,
+            406.14,
+            588.37,
+            619.86
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            337.94,
+            375.09,
+            446.35,
+            495.49,
+            717.81,
+            756.22
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            405.53,
+            450.12,
+            535.63,
+            594.59,
+            861.38,
+            907.48
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            425.81,
+            472.63,
+            562.43,
+            624.33,
+            904.46,
+            952.86
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            468.38,
+            519.89,
+            618.66,
+            686.76,
+            994.89,
+            1048.14
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            585.48,
+            649.86,
+            773.33,
+            858.46,
+            1243.61,
+            1310.18
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            707.89,
+            785.73,
+            935.01,
+            1037.94,
+            1503.61,
+            1584.09
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            885.46,
+            982.82,
+            1169.54,
+            1298.29,
+            1880.78,
+            1981.45
+          ]
+        }
+      ],
+      "total": [
+        32659.05,
+        36250.23,
+        43137.06,
+        47885.46,
+        69370.9,
+        73083.45
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enf.",
+            "Apto.",
+            "Enf.",
+            "Apto.",
+            "Apto.",
+            "Apto."
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Nac.",
+            "Nac.",
+            "Nac.",
+            "Nac.",
+            "Nac.",
+            "Nac."
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "75",
+            "75",
+            "75",
+            "75",
+            "240",
+            "240"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Valores COM IOF (2,38%)",
+        "Plano Compulsório ou Livre Adesão",
+        "Vigência de 12 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "aceitação de titulares até 74 anos, análise de redução de carências até 64 anos",
+        "HAPVIDA REDE: https://www.hapvida.com.br/site/rede-exclusiva"
+      ]
+    },
+    {
+      "name": "Seguros Unimed",
+      "section": "Sem Coparticipação",
+      "plans": [
+        "Compacto",
+        "Efetivo",
+        "Completo",
+        "Superior",
+        "Superior Plus",
+        "Sênior"
+      ],
+      "age_data": [
+        {
+          "label": "0 a 18",
+          "values": [
+            318.46,
+            351.47,
+            416.09,
+            460.4,
+            511.07,
+            1144.77
+          ]
+        },
+        {
+          "label": "19 a 23",
+          "values": [
+            389.79,
+            430.19,
+            509.3,
+            563.53,
+            625.55,
+            1401.2
+          ]
+        },
+        {
+          "label": "24 a 28",
+          "values": [
+            488.07,
+            538.66,
+            637.71,
+            705.61,
+            783.27,
+            1754.47
+          ]
+        },
+        {
+          "label": "29 a 33",
+          "values": [
+            539.34,
+            595.24,
+            704.7,
+            779.73,
+            865.55,
+            1938.78
+          ]
+        },
+        {
+          "label": "34 a 38",
+          "values": [
+            574.46,
+            634.01,
+            750.59,
+            830.51,
+            921.92,
+            2065.05
+          ]
+        },
+        {
+          "label": "39 a 43",
+          "values": [
+            666.37,
+            735.44,
+            870.68,
+            963.38,
+            1069.42,
+            2395.43
+          ]
+        },
+        {
+          "label": "44 a 48",
+          "values": [
+            796.59,
+            879.16,
+            1040.82,
+            1151.64,
+            1278.39,
+            2863.52
+          ]
+        },
+        {
+          "label": "49 a 53",
+          "values": [
+            955.37,
+            1054.4,
+            1248.28,
+            1381.2,
+            1533.21,
+            3434.31
+          ]
+        },
+        {
+          "label": "54 a 58",
+          "values": [
+            1134.25,
+            1251.82,
+            1482.0,
+            1639.8,
+            1820.28,
+            4077.32
+          ]
+        }
+      ],
+      "total": [
+        44608.81,
+        49232.65,
+        58285.53,
+        64491.59,
+        71589.66,
+        160356.57
+      ],
+      "extra_features": [
+        {
+          "label": "Acomodação",
+          "values": [
+            "Enfermaria",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento",
+            "Apartamento"
+          ]
+        },
+        {
+          "label": "Abrangência",
+          "values": [
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional",
+            "Nacional"
+          ]
+        },
+        {
+          "label": "Reembolso para consultas",
+          "values": [
+            "81.9",
+            "81.9",
+            "105",
+            "210",
+            "210",
+            "560"
+          ]
+        }
+      ],
+      "notes": [
+        "* Valores de reembolso para consultas",
+        "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+        "Valores SEM IOF (2,38%)",
+        "Plano Compulsório ( Quando entra 100% dos sócios ou 100% do FGTS)",
+        "Vigência de 24 meses",
+        "Valores e rede credenciada sujeitos a alteração",
+        "Sem limite de idade para titulares. Análise de redução de carências até 63 anos"
+      ]
+    }
+  ]
+}
