@@ -560,8 +560,43 @@ html = f'''<!DOCTYPE html>
 
     /* ─── MOBILE OPTIMIZATION ─── */
     @media (max-width: 900px) {{
-      .page-wrap {{ grid-template-columns: 1fr; padding: 20px 20px 60px; gap: 24px; }}
-      .sidebar {{ position: static; max-height: none; margin-bottom: 0; padding: 20px; border-radius: 16px; }}
+      header {{ position: static; }}
+      .page-wrap {{ grid-template-columns: 1fr; padding: 12px 12px 60px; gap: 20px; }}
+      .sidebar {{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 110;
+        flex-direction: row;
+        gap: 8px;
+        max-height: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px 12px;
+        margin: 0 0 8px 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(48,86,156,0.08);
+        white-space: nowrap;
+        background: var(--bg-card);
+        -webkit-overflow-scrolling: touch;
+      }}
+      .sidebar-label,
+      .sidebar-divider {{
+        display: none !important;
+      }}
+      .sidebar-special-btn,
+      .company-btn {{
+        width: auto !important;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        padding: 6px 12px;
+        margin: 0 !important;
+        font-size: 12px;
+      }}
+      .cb-name {{
+        max-width: 120px;
+      }}
       .scenario-hero-content {{ flex-direction: column; align-items: flex-start; gap: 24px; padding: 28px 24px; }}
       .scenario-stats {{ margin-left: 0; width: 100%; justify-content: flex-start; gap: 12px; }}
       .stat-box {{ flex: 1 1 calc(50% - 12px); min-width: 0; padding: 16px 12px; }}
@@ -1119,9 +1154,7 @@ html = f'''<!DOCTYPE html>
       .scenario-stats {{ margin-left: 0; margin-top: 8px; }}
     }}
     @media (max-width: 900px) {{
-      .page-wrap {{ grid-template-columns: 1fr; padding: 20px 16px; }}
-      .sidebar {{ display: none; }}
-      .insurer-cards-grid {{ grid-template-columns: 1fr; }}
+      /* Mobile layout consolidated in optimization section above */
     }}
     @media (max-width: 600px) {{
       .scenario-hero-content {{ padding: 20px; gap: 16px; }}
