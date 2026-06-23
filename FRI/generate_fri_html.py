@@ -17,6 +17,8 @@ with open(os.path.join(base_dir, 'fri_data.json'), encoding='utf-8') as f:
 # ── Data references ──
 rla_emp = data['rla_empresa']
 rla_sub = data['rla_subestipulante']
+rla_subs = data.get('rla_subs', [])  # New: list of all subs including Aura
+rla_aura = rla_subs[2]['data'] if len(rla_subs) > 2 else {'titulares': 0, 'dependentes': 0, 'total_vidas': 0, 'invoice_total': 0, 'premio_real': 0, 'iof': 0, 'persons': [], 'competencia': '', 'subestipulante': ''}
 plans_excel = data['plans_excel']
 empresa_name = data['empresa_name']
 competencia = data['competencia']
@@ -100,13 +102,16 @@ def normalize_plan_name(name):
     return name
 
 # ── Build employees summary by plan ──
-# Combine both RLAs
+# Combine all RLAs (FRI + KCB + Aura)
 all_persons = []
 for p in rla_emp.get('persons', []):
     p['unidade'] = rla_emp.get('subestipulante', 'FRI Principal')
     all_persons.append(p)
 for p in rla_sub.get('persons', []):
     p['unidade'] = rla_sub.get('subestipulante', 'KCB')
+    all_persons.append(p)
+for p in rla_aura.get('persons', []):
+    p['unidade'] = 'AURA COSMETICOS E PERFUMARIA'
     all_persons.append(p)
 
 # Group by plan
@@ -149,17 +154,30 @@ def gen_employees_table(persons, show_unidade=False):
 # ── Lives distribution by age band (from Excel formulas) ──
 def get_lives_for_band(label):
     lbl = str(label).strip().lower().replace('\xa0', ' ')
-    if '0 a 18' in lbl: return 23
-    if '19 a 23' in lbl: return 2
+    if '0 a 18' in lbl: return 24   # Era 23 (+1: Ana Victoria, 13)
+    if '19 a 23' in lbl: return 3   # Era 2  (+1: Monaliza, 21)
     if '24 a 28' in lbl: return 16
     if '29 a 33' in lbl: return 17
-    if '34 a 38' in lbl: return 10
-    if '39 a 43' in lbl: return 7
+    if '34 a 38' in lbl: return 11  # Era 10 (+1: Rodrigo, 38)
+    if '39 a 43' in lbl: return 8   # Era 7  (+1: Paulo, 43)
     if '44 a 48' in lbl: return 5
-    if '49 a 53' in lbl: return 3
+    if '49 a 53' in lbl: return 4   # Era 3  (+1: Ana Paula, 49)
     if '54 a 58' in lbl: return 2
     if '59 ou mais' in lbl: return 0
     return 0
+
+# ── Recalculate Plan Totals based on new lives distribution ──
+for ins in plans_excel:
+    if not ins.get('plans') or not ins.get('age_data'):
+        continue
+    num_plans = len(ins['plans'])
+    new_totals = [0.0] * num_plans
+    for row in ins['age_data']:
+        vidas = get_lives_for_band(row['label'])
+        for i, val in enumerate(row['values']):
+            if i < num_plans and isinstance(val, (int, float)):
+                new_totals[i] += vidas * val
+    ins['total'] = new_totals
 
 # ── Link to network PDFs ──
 def get_rede_buttons(name):
@@ -256,7 +274,7 @@ def gen_insurer_summary_cards(ins):
             <span class="{tag_class}">{tag_text}</span>
           </div>
           <div class="total-value">{v_str}</div>
-          <div class="total-label">total 85 vidas/mês</div>
+          <div class="total-label">total {total_vidas} vidas/mês</div>
         </div>''')
     return '\n'.join(cards)
 
@@ -299,7 +317,7 @@ def gen_age_table(ins):
     total_html = ''
     if total:
         total_tds = ''.join(f'<td>{fmt_brl_compact(v)}</td>' for v in total)
-        total_html = f'<tr class="total-row"><td><strong>Total</strong></td><td class="cell-vidas">85</td>{total_tds}</tr>'
+        total_html = f'<tr class="total-row"><td><strong>Total</strong></td><td class="cell-vidas">{total_vidas}</td>{total_tds}</tr>'
     
     # Extra features rows
     features_html = ''
@@ -385,7 +403,7 @@ def gen_insurer_panels(insurer_plans):
                   <span class="info-dot" style="width:4px; height:4px; border-radius:50%; background:var(--text-dim); display:inline-block;"></span>
                   <span>{len(plans)} planos</span>
                   <span class="info-dot" style="width:4px; height:4px; border-radius:50%; background:var(--text-dim); display:inline-block;"></span>
-                  <span>85 vidas</span>
+                  <span>{total_vidas} vidas</span>
                   <span class="info-dot" style="width:4px; height:4px; border-radius:50%; background:var(--text-dim); display:inline-block;"></span>
                   <span>{'Regional' if 'bronze' in name.lower() or 'smart' in name.lower() else 'Nacional'}</span>
                 </p>
@@ -453,11 +471,11 @@ def gen_insurer_panels(insurer_plans):
     return '\n'.join(panels)
 
 # ── Compute stats ──
-titulares_total = rla_emp['titulares'] + rla_sub['titulares']
-dependentes_total = rla_emp['dependentes'] + rla_sub['dependentes']
-vidas_total = rla_emp['total_vidas'] + rla_sub['total_vidas']
-premio_real_total = (rla_emp.get('premio_real') or 0) + (rla_sub.get('premio_real') or 0)
-iof_total = (rla_emp.get('iof') or 0) + (rla_sub.get('iof') or 0)
+titulares_total = rla_emp['titulares'] + rla_sub['titulares'] + rla_aura.get('titulares', 0)
+dependentes_total = rla_emp['dependentes'] + rla_sub['dependentes'] + rla_aura.get('dependentes', 0)
+vidas_total = rla_emp['total_vidas'] + rla_sub['total_vidas'] + rla_aura.get('total_vidas', 0)
+premio_real_total = (rla_emp.get('premio_real') or 0) + (rla_sub.get('premio_real') or 0) + (rla_aura.get('premio_real') or 0)
+iof_total = (rla_emp.get('iof') or 0) + (rla_sub.get('iof') or 0) + (rla_aura.get('iof') or 0)
 
 # Per capita
 per_capita = fatura_total / vidas_total if vidas_total else 0
@@ -467,7 +485,7 @@ reajuste_percentual = 15.87
 fatura_reajuste = fatura_total * (1 + (reajuste_percentual / 100.0))
 
 # ── Employees table HTML ──
-show_unidade = len(rla_sub.get('persons', [])) > 0
+show_unidade = (len(rla_sub.get('persons', [])) > 0) or (len(rla_aura.get('persons', [])) > 0)
 unidade_th = '<th>Unidade</th>' if show_unidade else ''
 employees_html = gen_employees_table(all_persons, show_unidade)
 
@@ -1292,7 +1310,7 @@ html = f'''<!DOCTYPE html>
             <span>Fatura {competencia}</span>
           </div>
           <div style="margin-top: 8px; font-size: 12px; color: var(--text-muted);">
-            2 unidades: <strong>FRI COMERCIO DE COSMETICOS E PERFUMARIA</strong> + <strong>KCB SERVICOS DE APOIO ADMINISTRATIVO</strong>
+            3 unidades: <strong>FRI COMERCIO DE COSMETICOS E PERFUMARIA</strong> + <strong>KCB SERVICOS DE APOIO ADM.</strong> + <strong>AURA COSMETICOS E PERFUMARIA</strong>
           </div>
         </div>
         <div class="scenario-stats">
@@ -1426,13 +1444,42 @@ html = f'''<!DOCTYPE html>
             </div>
           </div>
 
+          <!-- Unidade 3: Aura Cosmeticos -->
+          <div class="unidade-card fade-in">
+            <div class="unidade-card-header">
+              <div class="unidade-icon">✨</div>
+              <div>
+                <div class="unidade-name">AURA COSMETICOS E PERFUMARIA</div>
+                <div class="unidade-sub">Subestipulante · CNPJ 49.532.571/0001-66 · Fatura {competencia}</div>
+              </div>
+            </div>
+            <div class="unidade-stats">
+              <div class="unidade-stat">
+                <div class="usv">{rla_aura.get('titulares', 0)}</div>
+                <div class="usl">Titulares</div>
+              </div>
+              <div class="unidade-stat">
+                <div class="usv">{rla_aura.get('dependentes', 0)}</div>
+                <div class="usl">Dependentes</div>
+              </div>
+              <div class="unidade-stat">
+                <div class="usv">{rla_aura.get('total_vidas', 0)}</div>
+                <div class="usl">Total Vidas</div>
+              </div>
+              <div class="unidade-stat highlight" style="grid-column: 1 / -1; border-top: 1px solid var(--border); padding-top: 12px; margin-top: 4px;">
+                <div class="usv">{fmt_brl_compact(rla_aura.get('invoice_total', 0))}</div>
+                <div class="usl">Fatura {competencia}</div>
+              </div>
+            </div>
+          </div>
+
           <!-- Combined -->
           <div class="unidade-card fade-in" style="border-color: rgba(46,203,150,0.3); background: linear-gradient(135deg, rgba(46,203,150,0.03), var(--bg-card));">
             <div class="unidade-card-header" style="background: rgba(46,203,150,0.04);">
               <div class="unidade-icon" style="background: rgba(46,203,150,0.15); color: var(--accent3);">📊</div>
               <div>
                 <div class="unidade-name" style="color: var(--accent3)">CONSOLIDADO GERAL</div>
-                <div class="unidade-sub">Empresa + Subestipulante</div>
+                <div class="unidade-sub">Empresa + 2 Subestipulantes</div>
               </div>
             </div>
             <div class="unidade-stats">

@@ -401,12 +401,14 @@ if __name__ == '__main__':
     excel_path = os.path.join(base_dir, '..', 'temp_excel', 'fri_study.xlsx')
     rla1_path  = os.path.join(base_dir, 'RLA_22_06_2026.pdf')
     rla2_path  = os.path.join(base_dir, 'RLA_22_06_2026 (1).pdf')
+    rla3_path  = os.path.join(base_dir, 'RLA_23_06_2026 (1).pdf')
 
     print("Extracting Excel plans...")
     plans = extract_excel_plans(excel_path)
     for p in plans:
         print(f"  {p['name']}: {len(p['plans'])} planos | {len(p['age_data'])} faixas | {p['section']}")
 
+    # ── RLA 1: FRI (Empresa Principal / Estipulante) ──
     print("\nExtracting RLA 1 (FRI - Empresa Principal)...")
     rla1 = extract_rla_coordinated(rla1_path)
     print(f"  Empresa: {rla1['entity_name']}")
@@ -418,6 +420,7 @@ if __name__ == '__main__':
     for p in rla1['persons'][:10]:
         print(f"    [{p['titularidade'][:1]}] {p['name'][:28]:28s} | {p['plano'][:22]:22s} | R${p['valor']}")
 
+    # ── RLA 2: KCB (Subestipulante) ──
     print("\nExtracting RLA 2 (KCB Subestipulante)...")
     rla2 = extract_rla_coordinated(rla2_path)
     print(f"  Subestipulante: {rla2['subestipulante']}")
@@ -427,18 +430,34 @@ if __name__ == '__main__':
     for p in rla2['persons']:
         print(f"    [{p['titularidade'][:1]}] {p['name'][:30]:30s} | {p['plano'][:25]:25s} | R${p['valor']}")
 
-    total_combined = (rla1['invoice_total'] or 0) + (rla2['invoice_total'] or 0)
-    total_vidas = rla1['total_vidas'] + rla2['total_vidas']
+    # ── RLA 3: Aura Cosmeticos (Subestipulante) ──
+    print("\nExtracting RLA 3 (Aura Cosmeticos Subestipulante)...")
+    rla3 = extract_rla_coordinated(rla3_path)
+    print(f"  Subestipulante: {rla3['subestipulante']}")
+    print(f"  Total: R$ {rla3['invoice_total']}")
+    print(f"  Vidas: {rla3['total_vidas']}")
+    print(f"  Persons found: {len(rla3['persons'])}")
+    for p in rla3['persons']:
+        print(f"    [{p['titularidade'][:1]}] {p['name'][:30]:30s} | {p['plano'][:25]:25s} | R${p['valor']}")
+
+    all_rlas = [rla1, rla2, rla3]
+    total_combined = sum((r['invoice_total'] or 0) for r in all_rlas)
+    total_vidas = sum(r['total_vidas'] for r in all_rlas)
 
     output = {
         'case': 'FRI',
         'empresa_name': 'FRI Comercio de Cosmeticos e Perfumaria',
-        'competencia': rla1['competencia'] or rla2['competencia'],
+        'competencia': rla1['competencia'] or rla2['competencia'] or rla3['competencia'],
         'seguradora_atual': 'Porto Saude S.A.',
         'fatura_total_atual': total_combined,
         'total_vidas_atual': total_vidas,
         'rla_empresa': rla1,
         'rla_subestipulante': rla2,
+        'rla_subs': [
+            {'label': 'FRI Comercio de Cosmeticos e Perfumaria', 'cnpj': '23.127.599/0001-30', 'data': rla1},
+            {'label': 'KCB Serviços de Apoio', 'cnpj': '', 'data': rla2},
+            {'label': 'Aura Cosmeticos e Perfumaria LTDA', 'cnpj': '49.532.571/0001-66', 'data': rla3},
+        ],
         'plans_excel': plans
     }
 
