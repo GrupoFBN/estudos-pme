@@ -520,6 +520,20 @@ def gen_sidebar_items(insurer_plans):
 
 sidebar_items = gen_sidebar_items(plans_excel)
 
+# ── Nav items for mobile select dropdown ──
+def gen_mobile_select_options(insurer_plans):
+    options = []
+    for ins in insurer_plans:
+        name = ins['name']
+        plans = ins['plans']
+        slug = insurer_slug(name)
+        if not plans:
+            continue
+        options.append(f'<option value="{slug}">🏢 {name} ({len(plans)} planos)</option>')
+    return '\n'.join(options)
+
+mobile_select_options = gen_mobile_select_options(plans_excel)
+
 # ── Build insurer list for JS ──
 insurer_slugs_js = json.dumps([insurer_slug(i['name']) for i in plans_excel if i['plans']])
 
@@ -560,60 +574,86 @@ html = f'''<!DOCTYPE html>
 
     /* ─── MOBILE OPTIMIZATION ─── */
     @media (max-width: 900px) {{
-      header {{ position: static; }}
-      .page-wrap {{ grid-template-columns: 1fr; padding: 12px 12px 60px; gap: 20px; }}
-      .sidebar {{
-        position: -webkit-sticky;
+      header {{
         position: sticky;
         top: 0;
-        z-index: 110;
-        flex-direction: row;
-        gap: 8px;
-        max-height: none;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 10px 12px;
-        margin: 0 0 8px 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(48,86,156,0.08);
-        white-space: nowrap;
-        background: var(--bg-card);
-        -webkit-overflow-scrolling: touch;
+        z-index: 120;
+        height: 60px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }}
-      .sidebar-label,
-      .sidebar-divider {{
+      .header-inner {{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        flex-direction: row;
+      }}
+      .header-title {{
         display: none !important;
       }}
-      .sidebar-special-btn,
-      .company-btn {{
-        width: auto !important;
-        flex: 0 0 auto;
-        display: inline-flex;
-        align-items: center;
-        padding: 6px 12px;
-        margin: 0 !important;
-        font-size: 12px;
+      .logo-badge {{
+        height: 38px;
+        margin: 0 auto;
       }}
-      .cb-name {{
-        max-width: 120px;
+      .header-spacer {{
+        display: none;
       }}
-      .scenario-hero-content {{ flex-direction: column; align-items: flex-start; gap: 24px; padding: 28px 24px; }}
-      .scenario-stats {{ margin-left: 0; width: 100%; justify-content: flex-start; gap: 12px; }}
-      .stat-box {{ flex: 1 1 calc(50% - 12px); min-width: 0; padding: 16px 12px; }}
+      .page-wrap {{
+        grid-template-columns: 1fr;
+        padding: 12px 12px 60px;
+        gap: 16px;
+      }}
+      .sidebar {{
+        display: none !important;
+      }}
+      .mobile-menu-container {{
+        display: block;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 60px;
+        z-index: 110;
+        background: var(--bg-dark);
+        padding: 8px 4px 12px;
+        margin: -8px 0 8px 0;
+      }}
+      .mobile-select-cia {{
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: #fff;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--accent);
+        outline: none;
+        box-shadow: 0 4px 12px rgba(48,86,156,0.06);
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2330569c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        background-size: 16px;
+      }}
+      .scenario-hero-content {{ flex-direction: column; align-items: flex-start; gap: 20px; padding: 20px; }}
+      .scenario-stats {{ margin-left: 0; width: 100%; justify-content: flex-start; gap: 8px; }}
+      .stat-box {{ flex: 1 1 calc(50% - 8px); min-width: 0; padding: 12px 8px; }}
       .plan-cards {{ grid-template-columns: 1fr; gap: 16px; }}
-      .summary-card {{ padding: 20px; }}
-      .price-table {{ font-size: 11.5px; }}
-      .price-table th, .price-table td {{ padding: 12px 8px; }}
-      .table-wrap, .employees-table-wrap {{ overflow-x: auto; margin: 0 -24px; padding: 0 24px; }}
-      .price-table-wrap {{ overflow-x: auto; margin: 0 -24px; padding: 0 24px; }}
-      .savings-grid-layout {{ grid-template-columns: 1fr; gap: 16px; }}
+      .summary-card {{ padding: 16px; }}
+      .price-table {{ font-size: 11px; }}
+      .price-table th, .price-table td {{ padding: 10px 6px; }}
+      .table-wrap, .employees-table-wrap {{ overflow-x: auto; margin: 0 -12px; padding: 0 12px; }}
+      .price-table-wrap {{ overflow-x: auto; margin: 0 -12px; padding: 0 12px; }}
+      .savings-grid-layout {{ grid-template-columns: 1fr; gap: 12px; }}
       .savings-column[style*="grid-column: span 2;"] {{ grid-column: span 1 !important; }}
-      .header-inner {{ flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px 0; height: auto; }}
-      .header-spacer {{ display: none; }}
-      .header-title h1 {{ font-size: 15px; }}
-      .employees-header {{ flex-direction: column; align-items: stretch; gap: 16px; }}
+      .employees-header {{ flex-direction: column; align-items: stretch; gap: 12px; }}
       .search-input {{ width: 100%; }}
-      .employees-table {{ min-width: 700px; }}
+      .employees-table {{ min-width: 600px; }}
     }}
 
     body {{
@@ -1284,6 +1324,9 @@ html = f'''<!DOCTYPE html>
       font-weight: 900;
       font-size: 12px;
     }}
+    .mobile-menu-container {{
+      display: none;
+    }}
   </style>
 </head>
 
@@ -1325,6 +1368,14 @@ html = f'''<!DOCTYPE html>
 
   <!-- ─── CONTENT ─── -->
   <main class="main-content">
+
+    <!-- Mobile dropdown selector -->
+    <div class="mobile-menu-container">
+      <select class="mobile-select-cia" id="mobile-insurer-select" onchange="showPanel(this.value)">
+        <option value="rla">🔍 Cenário Atual (Porto Saúde)</option>
+        {mobile_select_options}
+      </select>
+    </div>
 
     <!-- ─── SCENARIO ATUAL HERO ─── -->
     <div class="scenario-hero">
@@ -1586,6 +1637,12 @@ function showPanel(panelId) {{
     const btn = document.getElementById('btn-' + panelId);
     if (btn) btn.classList.add('active');
     currentPanel = 'insurer';
+  }}
+  
+  // Sync the mobile select value if it exists
+  const mobileSelect = document.getElementById('mobile-insurer-select');
+  if (mobileSelect) {{
+    mobileSelect.value = panelId;
   }}
   
   window.scrollTo({{ top: 0, behavior: 'smooth' }});
