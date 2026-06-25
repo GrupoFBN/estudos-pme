@@ -73,8 +73,8 @@ def format_reembolso_list(reembolso_dict, plans_count):
 def main():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     
-    # Path to scratch assets
-    scratch_dir = r"C:\Users\Danilo\.gemini\antigravity-ide\brain\403bb0ee-8c5e-4b96-8da1-c977795af698\scratch"
+    # Path to local template assets
+    scratch_dir = os.path.join(base_dir, "templates")
     
     # Load JSON data
     with open(os.path.join(base_dir, 'xpanse_data.json'), encoding='utf-8') as f:
@@ -127,9 +127,32 @@ def main():
                 # Format reembolso list
                 reembolso_list = format_reembolso_list(tbl.get('reembolso'), plans_count)
                 
+                # Clean plan names and apply overrides for HapVida Smart
+                mapped_plans = []
+                mapped_acom = list(tbl.get('acomodacao', []))
+                mapped_abrang = list(tbl.get('abrangencia', []))
+                
+                # Ensure lists have correct length
+                while len(mapped_acom) < plans_count:
+                    mapped_acom.append(None)
+                while len(mapped_abrang) < plans_count:
+                    mapped_abrang.append(None)
+                
+                for idx, p in enumerate(tbl['plans']):
+                    p_name = p.strip()
+                    if mapped_name == 'HapVida Smart':
+                        if 'smart 200 up' in p_name.lower():
+                            p_name = 'Smart Up'
+                        if 'prime' in p_name.lower():
+                            mapped_abrang[idx] = 'Nacional'
+                            mapped_acom[idx] = 'Apartamento'
+                        else:
+                            mapped_abrang[idx] = 'Regional'
+                    mapped_plans.append(p_name)
+                
                 # Format acomodacao list
                 acom_list = []
-                for a in tbl.get('acomodacao', []):
+                for a in mapped_acom:
                     if a is None:
                         acom_list.append("-")
                     elif 'apart' in a.lower():
@@ -148,9 +171,9 @@ def main():
                     })
                     
                 new_tables.append({
-                    'plans': tbl['plans'],
+                    'plans': mapped_plans,
                     'acomodacao': acom_list,
-                    'abrangencia': tbl.get('abrangencia', ['Nacional'] * plans_count),
+                    'abrangencia': [ab if ab is not None else "-" for ab in mapped_abrang],
                     'reembolso': reembolso_list,
                     'total': tbl.get('total'),
                     'age_data': age_data

@@ -1,0 +1,192 @@
+{
+  "Amil Bronze": {
+    "color": "#e74c3c",
+    "domain": "amil.com.br",
+    "resumo": "Ampla rede própria e credenciada com hospitais de excelência e forte atuação em telemedicina. Ótimo para quem busca cobertura nacional robusta.",
+    "redes": [
+      {
+        "label": "Hospitais",
+        "file": "Rede/Amil bronze.pdf"
+      },
+      {
+        "label": "Laboratórios",
+        "file": "Rede/amil lab linha bronze.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Aceitação de idade e análise de redução de carências até 69 anos",
+      "Contratação somente na modalidade com coparticipação"
+    ]
+  },
+  "Linha Amil": {
+    "color": "#e67e22",
+    "domain": "amil.com.br",
+    "resumo": "Ampla rede própria e credenciada com hospitais de excelência e forte atuação em telemedicina. Ótimo para quem busca cobertura nacional robusta.",
+    "redes": [],
+    "diferenciais": [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Aceitação de idade e análise de redução de carências até 69 anos",
+      "Contratação somente na modalidade com coparticipação parcial"
+    ]
+  },
+  "Amil Selecionada": {
+    "color": "#e67e22",
+    "domain": "amil.com.br",
+    "resumo": "Ampla rede própria e credenciada com hospitais de excelência e forte atuação em telemedicina. Ótimo para quem busca cobertura nacional robusta.",
+    "redes": [
+      {
+        "label": "Rede Credenciada",
+        "file": "Rede/amil selecionada.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Aceitação de idade e análise de redução de carências até 69 anos",
+      "Contratação somente na modalidade com coparticipação parcial"
+    ]
+  },
+  "HapVida Smart": {
+    "color": "#f39c12",
+    "domain": "hapvida.com.br",
+    "resumo": "Excelente custo-benefício com forte verticalização da rede (hospitais próprios), garantindo eficiência e mensalidades mais baixas.",
+    "redes": [
+      {
+        "label": "Hospitais",
+        "file": "Rede/REDE DE HOSPITAIS HMO HAPND_02.06.26.pdf"
+      },
+      {
+        "label": "Laboratórios",
+        "file": "Rede/Laboratórios - RMSP - 02.06.2026.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório ou Livre Adesão",
+      "Vigência de 12 meses",
+      "Aceitação de titulares até 74 anos, análise de redução de carências até 64 anos"
+    ]
+  },
+  "HapVida Advance": {
+    "color": "#f39c12",
+    "domain": "hapvida.com.br",
+    "resumo": "Excelente custo-benefício com forte verticalização da rede (hospitais próprios), garantindo eficiência e mensalidades mais baixas.",
+    "redes": [
+      {
+        "label": "Hospitais",
+        "file": "Rede/Rede_de_Hospitais_Advance_Premium_Infinity1000_SP_ABC (1).pdf"
+      },
+      {
+        "label": "Laboratórios",
+        "file": "Rede/Laboratórios - RMSP - 02.06.2026.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório ou Livre Adesão",
+      "Vigência de 12 meses",
+      "Aceitação de titulares até 74 anos, análise de redução de carências até 64 anos",
+      "Contratação somente na modalidade com coparticipação"
+    ]
+  },
+  "Linha Porto Saúde": {
+    "color": "#3498db",
+    "domain": "portoseguro.com.br",
+    "resumo": "Atendimento premium com autorizações ágeis e forte programa de medicina preventiva, além de descontos em outros seguros do grupo.",
+    "redes": [
+      {
+        "label": "Linha Pro",
+        "file": "Rede/rede porto linha pro.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Aceitação de titulares e análise de redução de carências até 73 anos"
+    ]
+  },
+  "Porto Seguro": {
+    "color": "#2980b9",
+    "domain": "portoseguro.com.br",
+    "resumo": "Atendimento premium com autorizações ágeis e forte programa de medicina preventiva, além de descontos em outros seguros do grupo.",
+    "redes": [
+      {
+        "label": "Linha Pro",
+        "file": "Rede/rede porto linha pro.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Aceitação de titulares e análise de redução de carências até 75 anos",
+      "Não aceita MEI"
+    ]
+  },
+  "SulAmérica": {
+    "color": "#9b59b6",
+    "domain": "sulamerica.com.br",
+    "resumo": "Tradição em alto padrão com uma das melhores redes credenciadas do país. Destaque para o sistema de reembolso rápido e descomplicado.",
+    "redes": [
+      {
+        "label": "Rede Credenciada",
+        "file": "Rede/sulamerica.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores COM IOF (2,38%)",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Sem limite de idade de titulares. Análise para redução de carências até 67 anos",
+      "Plano Direto: Reembolso apenas para urgência/emergência",
+      "Plano Clássico e Especial 100: urgência/emergência e consultas eletivas",
+      "Plano Especial 100 R1/R2/R3/Prestige: urgência/emergência, eletivas e honorários",
+      "Linha Vital: Não possui atendimento Leforte, São Cristóvão, 9 de Julho, Santa Paula, Samaritano e Alvorada",
+      "Especial Mais: Atendimento Vila Nova Star e Laboratório Alta"
+    ]
+  },
+  "Bradesco": {
+    "color": "#c0392b",
+    "domain": "bradescoseguros.com.br",
+    "resumo": "Foco exclusivo no público corporativo corporativo (PME), oferecendo grande solidez, flexibilidade de rede e um sistema de reembolso de referência no mercado.",
+    "redes": [
+      {
+        "label": "Hospitais",
+        "file": "Rede/rede crenciada bradesco hopsitais.pdf"
+      },
+      {
+        "label": "Laboratórios",
+        "file": "Rede/rede crenciada bradesco laboratórios.pdf"
+      }
+    ],
+    "diferenciais": [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 12 meses",
+      "Sem limite de idade para aceitação. Análise de redução de carências até 67 anos"
+    ]
+  },
+  "Seguros Unimed": {
+    "color": "#16a085",
+    "domain": "unimed.coop.br",
+    "resumo": "Integra o maior sistema cooperativista de saúde do mundo, oferecendo abrangência nacional e atendimento focado na relação médico-paciente.",
+    "redes": [],
+    "diferenciais": [
+      "Valores SEM IOF (2,38%)",
+      "Cobrado taxa de inscrição de R$ 5,00 por vida na 1ª fatura",
+      "Plano Compulsório (Quando entra 100% dos sócios ou 100% do FGTS)",
+      "Vigência de 24 meses",
+      "Sem limite de idade para titulares. Análise de redução de carências até 63 anos"
+    ]
+  }
+}

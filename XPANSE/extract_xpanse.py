@@ -122,47 +122,39 @@ def parse_rows(rows, sheet_name):
             current_plan_names = plan_names
             current_plan_col_start = faixa_col + 1
 
-        elif is_total_row and current_plan_names:
+        elif is_total_row and current_plan_names and current_plan_col_start is not None:
             # Handle inline totals like HapVida
             for tc_idx, tc_val in total_cells:
                 vals = []
-                # Sometimes total is exactly at the start of the columns, sometimes shifted.
-                # Find the first column after the 'Total' text
-                for j in range(tc_idx + 1, tc_idx + len(current_plan_names) + 5):
-                    if j < len(row):
-                        v = clean_value(row[j])
-                        if v is not None:
-                            vals.append(v)
-                vals = vals[:len(current_plan_names)]
-                if vals:
+                for j in range(current_plan_col_start, current_plan_col_start + len(current_plan_names)):
+                    v = row[j] if j < len(row) else None
+                    vals.append(clean_value(v))
+                if any(x is not None for x in vals):
                     current_rows.append({'label': str(tc_val).strip(), 'values': vals, 'is_total': True})
 
-        elif is_acomodacao and current_plan_names:
+        elif is_acomodacao and current_plan_names and current_plan_col_start is not None:
             vals = []
-            for j, c in cells:
-                if 'Acomoda' not in str(c):
-                    vals.append(str(c).strip())
-            current_acomodacao = vals[:len(current_plan_names)]
+            for j in range(current_plan_col_start, current_plan_col_start + len(current_plan_names)):
+                v = row[j] if j < len(row) else None
+                vals.append(str(v).strip() if v is not None else None)
+            current_acomodacao = vals
 
-        elif is_abrangencia and current_plan_names:
+        elif is_abrangencia and current_plan_names and current_plan_col_start is not None:
             vals = []
-            for j, c in cells:
-                if 'Abrang' not in str(c):
-                    vals.append(str(c).strip())
-            current_abrangencia = vals[:len(current_plan_names)]
+            for j in range(current_plan_col_start, current_plan_col_start + len(current_plan_names)):
+                v = row[j] if j < len(row) else None
+                vals.append(str(v).strip() if v is not None else None)
+            current_abrangencia = vals
 
-        elif is_reembolso and current_plan_names:
+        elif is_reembolso and current_plan_names and current_plan_col_start is not None:
             vals = []
-            for j, c in cells:
-                sv = str(c).strip()
-                if 'Reembolso' not in sv and 'consulta' not in sv.lower():
-                    cv = clean_value(c)
-                    if cv is not None:
-                        vals.append(cv)
+            for j in range(current_plan_col_start, current_plan_col_start + len(current_plan_names)):
+                v = row[j] if j < len(row) else None
+                vals.append(clean_value(v))
             if current_reembolso is None:
-                current_reembolso = {'PS': vals[:len(current_plan_names)]}
+                current_reembolso = {'PS': vals}
             else:
-                current_reembolso['eletiva'] = vals[:len(current_plan_names)]
+                current_reembolso['eletiva'] = vals
 
         elif current_plan_names and current_plan_col_start is not None:
             label_candidates = [(j, c) for j, c in cells if str(c).strip() and not str(c).startswith('R$')]
@@ -174,14 +166,10 @@ def parse_rows(rows, sheet_name):
             is_age = re.match(r'^\d', label_str) is not None or 'ou mais' in label_str.lower()
             if is_age:
                 vals = []
-                for j in range(label_idx + 1, label_idx + len(current_plan_names) + 5):
-                    if j < len(row):
-                        v = clean_value(row[j])
-                        if v is not None:
-                            vals.append(v)
-                vals = vals[:len(current_plan_names)]
-                if vals:
-                    current_rows.append({'label': label_str, 'values': vals})
+                for j in range(current_plan_col_start, current_plan_col_start + len(current_plan_names)):
+                    v = row[j] if j < len(row) else None
+                    vals.append(clean_value(v))
+                current_rows.append({'label': label_str, 'values': vals})
 
     save_table()
     return result

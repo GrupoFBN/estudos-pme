@@ -1367,6 +1367,47 @@
 .btn-compare-action.secondary:hover {
   background: rgba(255, 255, 255, 0.25) !important;
 }
+
+/* --- DIFERENCIAIS E OBSERVACOES --- */
+.diferenciais-box {
+  margin-top: 24px;
+  background: linear-gradient(135deg, rgba(48,86,156,0.03) 0%, rgba(46,203,150,0.03) 100%);
+  border: 1px solid rgba(48,86,156,0.12);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  border-left: 4px solid var(--accent);
+  box-shadow: var(--shadow);
+}
+.diferenciais-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.diferenciais-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0;
+}
+.diferenciais-list li {
+  position: relative;
+  padding-left: 16px;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.diferenciais-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
   </style>
 </head>
 <body>
@@ -2559,7 +2600,16 @@ const COMPANIES = [
     "color": "#f39c12",
     "domain": "hapvida.com.br",
     "resumo": "Excelente custo-benefício com forte verticalização da rede (hospitais próprios), garantindo eficiência e mensalidades mais baixas.",
-    "redes": [],
+    "redes": [
+      {
+        "label": "Hospitais",
+        "file": "../Rede/REDE DE HOSPITAIS HMO HAPND_02.06.26.pdf"
+      },
+      {
+        "label": "Laboratórios",
+        "file": "../Rede/Laboratórios - RMSP - 02.06.2026.pdf"
+      }
+    ],
     "diferenciais": [
       "Valores COM IOF (2,38%)",
       "Plano Compulsório ou Livre Adesão",
@@ -2572,97 +2622,109 @@ const COMPANIES = [
         "tables": [
           {
             "plans": [
-              "Smart 200 Up",
-              "Smart 300",
-              "Smart 500",
-              "Smart 500."
+              "Nosso Médico",
+              "Smart Up",
+              "Smart Flex Sp",
+              "Smart Prime Sp Qc",
+              "Smart Prime Sp Qp"
             ],
             "acomodacao": [
+              "-",
               "Enf.",
               "Enf.",
-              "Enf.",
+              "Apt.",
               "Apt."
             ],
             "abrangencia": [
               "Regional",
               "Regional",
               "Regional",
-              "Regional"
+              "Nacional",
+              "Nacional"
             ],
             "reembolso": [
+              "-",
               "-",
               "-",
               "-",
               "-"
             ],
             "total": [
+              13598.43,
               16345.45,
-              24023.69,
-              25934.3,
-              28208.52
+              19785.5,
+              25594.64,
+              27102.14
             ],
             "age_data": [
               {
                 "label": "0 a 18",
                 "values": [
+                  100.51,
                   120.82,
-                  174.78,
-                  188.68,
-                  205.23
+                  146.24,
+                  198.11,
+                  209.78
                 ]
               },
               {
                 "label": "19 a 23",
                 "values": [
+                  135.67,
                   163.08,
-                  235.92,
-                  254.68,
-                  277.02
+                  197.4,
+                  231.79,
+                  245.44
                 ]
               },
               {
                 "label": "24 a 28",
                 "values": [
+                  160.34,
                   192.73,
-                  278.81,
-                  300.98,
-                  327.38
+                  233.29,
+                  282.78,
+                  299.44
                 ]
               },
               {
                 "label": "29 a 33",
                 "values": [
+                  160.34,
                   192.73,
-                  291.3,
-                  314.47,
-                  342.04
+                  233.29,
+                  339.34,
+                  359.33
                 ]
               },
               {
                 "label": "34 a 38",
                 "values": [
+                  160.34,
                   192.73,
-                  301.03,
-                  324.98,
-                  353.46
+                  233.29,
+                  356.31,
+                  377.29
                 ]
               },
               {
                 "label": "39 a 43",
                 "values": [
+                  190.43,
                   228.89,
-                  331.13,
-                  357.48,
-                  388.81
+                  277.08,
+                  391.94,
+                  415.02
                 ]
               },
               {
                 "label": "49 a 53",
                 "values": [
+                  321.84,
                   386.83,
-                  559.63,
-                  604.13,
-                  657.09
+                  468.27,
+                  592.35,
+                  627.23
                 ]
               }
             ]
@@ -2674,97 +2736,109 @@ const COMPANIES = [
         "tables": [
           {
             "plans": [
-              "Smart 200 Up",
-              "Smart 300",
-              "Smart 500",
-              "Smart 500."
+              "Nosso Médico",
+              "Smart Up",
+              "Smart Flex Sp",
+              "Smart Prime Sp Qc",
+              "Smart Prime Sp Qp"
             ],
             "acomodacao": [
+              "-",
               "Enf.",
               "Enf.",
-              "Enf.",
+              "Apt.",
               "Apt."
             ],
             "abrangencia": [
               "Regional",
               "Regional",
               "Regional",
-              "Regional"
+              "Nacional",
+              "Nacional"
             ],
             "reembolso": [
+              "-",
               "-",
               "-",
               "-",
               "-"
             ],
             "total": [
+              10199.45,
               12258.97,
-              16815.93,
-              19449.66,
-              21156.73
+              14840.2,
+              19197.06,
+              20326.64
             ],
             "age_data": [
               {
                 "label": "0 a 18",
                 "values": [
+                  75.39,
                   90.61,
-                  122.35,
-                  141.5,
-                  153.93
+                  109.69,
+                  148.58,
+                  157.33
                 ]
               },
               {
                 "label": "19 a 23",
                 "values": [
+                  101.76,
                   122.3,
-                  165.14,
-                  191.0,
-                  207.77
+                  148.06,
+                  173.85,
+                  184.08
                 ]
               },
               {
                 "label": "24 a 28",
                 "values": [
+                  120.26,
                   144.55,
-                  195.16,
-                  225.73,
-                  245.54
+                  174.98,
+                  212.1,
+                  224.58
                 ]
               },
               {
                 "label": "29 a 33",
                 "values": [
+                  120.26,
                   144.55,
-                  203.9,
-                  235.84,
-                  256.53
+                  174.98,
+                  254.52,
+                  269.49
                 ]
               },
               {
                 "label": "34 a 38",
                 "values": [
+                  120.26,
                   144.55,
-                  210.71,
-                  243.71,
-                  265.1
+                  174.98,
+                  267.25,
+                  282.98
                 ]
               },
               {
                 "label": "39 a 43",
                 "values": [
+                  142.84,
                   171.68,
-                  231.78,
-                  268.08,
-                  291.61
+                  207.83,
+                  293.97,
+                  311.27
                 ]
               },
               {
                 "label": "49 a 53",
                 "values": [
+                  241.41,
                   290.13,
-                  391.71,
-                  453.06,
-                  492.82
+                  351.23,
+                  444.28,
+                  470.44
                 ]
               }
             ]
@@ -2779,7 +2853,16 @@ const COMPANIES = [
     "color": "#f39c12",
     "domain": "hapvida.com.br",
     "resumo": "Excelente custo-benefício com forte verticalização da rede (hospitais próprios), garantindo eficiência e mensalidades mais baixas.",
-    "redes": [],
+    "redes": [
+      {
+        "label": "Hospitais",
+        "file": "../Rede/Rede_de_Hospitais_Advance_Premium_Infinity1000_SP_ABC (1).pdf"
+      },
+      {
+        "label": "Laboratórios",
+        "file": "../Rede/Laboratórios - RMSP - 02.06.2026.pdf"
+      }
+    ],
     "diferenciais": [
       "Valores COM IOF (2,38%)",
       "Plano Compulsório ou Livre Adesão",
@@ -5425,6 +5508,19 @@ function renderMain() {
       <div class="big-icon">🔍</div>
       <p>Nenhum plano corresponde aos filtros selecionados.</p>
       <button class="btn-compare-action" style="margin-top:12px; font-size:12px; padding:6px 16px" onclick="setFilterCoparticipacao('todos'); setFilterAcomodacao('todos')">Limpar Filtros</button>
+    </div>`;
+  }
+
+  // Diferenciais no final da aba da operadora
+  if (c.diferenciais && c.diferenciais.length > 0) {
+    html += `
+    <div class="diferenciais-box" style="margin-top: 24px;">
+      <div class="diferenciais-title">
+        <span style="font-size:16px">ℹ️</span> Regras de Aceitação & Informações Gerais
+      </div>
+      <ul class="diferenciais-list">
+        ${c.diferenciais.map(d => `<li>${d}</li>`).join('')}
+      </ul>
     </div>`;
   }
 
